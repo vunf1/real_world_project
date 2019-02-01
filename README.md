@@ -5,7 +5,7 @@ Real World Project Version Control
 > git config --global user.email "<uni email>"
 > git config --global user.name "<uni email without @uni.coventry.ac.uk>"
 ---
-> git add <name file to add (your file(s) ) <br>
+> git add <name file to add (your edited file(s) )> <br>
 > git commit -m "<text, write something about you have done(Good pratice)>"
 git push
 
