@@ -6,12 +6,12 @@ University Navigation - Version Control
 > MAC user Install Git: https://git-scm.com/download/mac<br>
 > Linux insert command: sudo apt-get install git<br>
 
-> git config --global user.email "<uni email>"
-> git config --global user.name "<uni email without @uni.coventry.ac.uk>"
-<br>
-> git add <name file to add (your edited file(s) )> <br>
-> git commit -m "<text, write something about you have done(Good pratice)>"
-git push
+> git config --global user.email "(uni email)"<br>
+> git config --global user.name "(uni email without @uni.coventry.ac.uk)"<br>
+
+> git add (name file to add (your edited file(s) ) <br>
+> git commit -m "(text, write something about you have done(Good pratice))"<br>
+> git push
 
 ---
 
@@ -40,7 +40,7 @@ git push
 - [ ] Get familiar with 3DsMax, Animations
 
 ### ESSENCIAL(To achive high mark)
-- [ ] 
+- [ ] :soon:
 
 ### EXTRA 
 
