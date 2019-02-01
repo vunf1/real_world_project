@@ -2,16 +2,15 @@
 University Navigation - Version Control 
 
 ###### config your console with your github account
-> Windows user Install Git: https://git-scm.com/download/win<br>
-> MAC user Install Git: https://git-scm.com/download/mac<br>
-> Linux insert command: sudo apt-get install git<br>
+> - [ ] Windows user Install Git: https://git-scm.com/download/win</br>
+> - [ ] MAC user Install Git: https://git-scm.com/download/mac</br>
+> - [ ] Linux insert command: sudo apt-get install git</br>
 
-> git config --global user.email "(uni email)"<br>
-> git config --global user.name "(uni email without @uni.coventry.ac.uk)"<br>
-
-> git add (name file to add (your edited file(s) ) <br>
-> git commit -m "(text, write something about you have done(Good pratice))"<br>
-> git push
+> - [ ] git config --global user.email "(uni email)" </br>
+> - [ ] git config --global user.name "(uni email without @uni.coventry.ac.uk)" </br>
+> - [ ] git add (name file to add (your edited file(s)) ) </br>
+> - [ ] git commit -m "(write something about you have done(Good pratice))"</br>
+> - [ ] git push
 
 ---
 
@@ -24,14 +23,14 @@ University Navigation - Version Control
 
 
 :exclamation: :trophy: Project Management :
-> - [x] :warning: __Flow Diagram(Code/UML)__ 
+> - [x] :warning: __Flow(Class) Diagram(Code/UML)__ 
 > - [x] :warning: __ER Diagram(DB)__ 
 
 ---
 ### TO DO LIST :metal: CODERS
 - [ ] :warning: Choose a design
-- [ ] Get familiar with Web Programming
-- [ ] Get familiar with MVC Programming Model
+- [ ] Get familiar with Web Programming - Javascript(Events/Dynamic HTML) / PHP(Basic/Syntax)
+- [ ] Get familiar with MVC Programming Model -  CodeIgniter
 
 ---
 ### TO DO LIST :seedling: MULTIMEDIA
