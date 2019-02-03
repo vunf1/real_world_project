@@ -38,7 +38,7 @@ University Navigation - Version Control
 - [ ] Get familiar with 3DsMax, Build 3D objects(singular)
 - [ ] Get familiar with 3DsMax, Animations
 
-### ESSENCIAL(To achive high mark)
+### ESSENTIAL(To achieve high mark)
 - [ ] :soon:
 
 ### EXTRA 
