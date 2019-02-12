@@ -10,9 +10,21 @@ University Navigation - Version Control
 > - [ ] git config --global user.name "(uni email without @uni.coventry.ac.uk)" </br>
 > - [ ] git add (name file to add (your edited file(s)) ) </br>
 > - [ ] git commit -m "(write something about you have done(Good pratice))"</br>
-> - [ ] git push
+> - [ ] git push  
+
+extract from github
+> - [ ] git pull
+
+any error contact Joao Maia
 
 ---
+
+### Comments on the code
+> - [ ]  __<?php //<something> ?>__ to comment on html or javascript
+can prevent futher reading from clients when inspect the elements.
+
+
+
 
 ### BUGS FOUND
 

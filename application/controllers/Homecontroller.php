@@ -25,6 +25,8 @@ class Homecontroller extends CI_Controller {
         parent::__construct();
         $this->output->set_header('Access-Control-Allow-Origin: *');
         
+	    $this->load->helper('url');     
+	    $this->base = $this->config->item('base_url');
         //$this->load->model('tionmodel');
         // $this->load->database();
         //Load them in the constructor
@@ -37,7 +39,14 @@ class Homecontroller extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('loadscript');
+
 		$this->load->view('welcome_message');
+		$this->load->view('loadscript');
+	}
+
+	public function index_content()
+	{
+		$this->load->view('load_content_index');
+
 	}
 }
