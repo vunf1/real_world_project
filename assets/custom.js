@@ -17,12 +17,13 @@
 		 */ 
 
 
-/* during the loading of the element (what2DO) */
-$(document).load(function() {
+/* during the loading of the element (what2DO)
+$(window).load(function() {
 
 
 
 });
+ */
 
 /* when element is full load (ready to execute) */
 $(document).ready(function() {
@@ -33,10 +34,10 @@ $(document).ready(function() {
 
 /* when element is trigger(clicked) load function/ execute same connection */
 $( "#search-op" ).on('click',function() {
-  allert("OKOK");
+  alert("OKOK");
 
     $.ajax({
-     url:base_url()+'index_content',
+     url:base_url()+'index.php/Homecontroller/index_content',
      method:"POST",
      dataType:'text',
      success:function(data){

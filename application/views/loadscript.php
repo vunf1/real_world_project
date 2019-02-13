@@ -79,7 +79,7 @@ function shootServerInfo(){
 
 
 			        <!- Js -   ->
-<script src="<?php base_url()?>assets/jQuery_321_slim_min.js">
+<script src="<?php base_url()?>assets/jQuery_331.js">
 	/* jQuery min 3.2.1 slim*/
 </script>
 
@@ -93,8 +93,10 @@ function shootServerInfo(){
 	/* Bootstrap 4 min*/
 </script>
 
-<script src="<?php base_url()?>assets/jQueryMobile_min_1.4.5.js"></script>
+<!--<script src="<?php //base_url()?>assets/jQueryMobile_min_1.4.5.js"></script>
+-->
 
+<script type="text/javascript" src="<?php base_url()?>assets/custom.js"></script>
 
 			        <!- Css   ->
 
@@ -104,8 +106,6 @@ function shootServerInfo(){
 
 <link rel="stylesheet" href="<?php base_url()?>assets/custom.css">
 
-
-<script type="text/javascript" src="<?php base_url()?>assets/custom.js"></script>
 
 
 	<title>Index </title>

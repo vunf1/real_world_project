@@ -53,10 +53,11 @@ class Homecontroller extends CI_Controller {
 
 	public function index_content()
 	{
-		var_dump($this->agent->is_browser());
+		//var_dump($this->agent->is_mobile());
+		//var_dump($this->agent->is_browser());
 		$json=file_get_contents(base_url().'assets/document-building.json');
-		$result['json']=json_encode($json,true);
-
+		$result['json']=$json;
+		//json inside result will be a variable on the view to be handle
 		$this->load->view('load_content_index',$result);
 
 

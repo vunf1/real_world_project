@@ -17,7 +17,7 @@ li{
 .nav-link,.navbar-item{
 	text-align: center;
 	word-wrap: break-word; 
-	font-size: 10px;
+	font-size: 13px;
 }
 
 /*change properties from id*/
@@ -25,4 +25,8 @@ li{
 	word-wrap: break-word;
 	background-color: cornflowerblue;
 
+}
+
+#search-op, #nav-op, #scan-op{
+	color:white;
 }

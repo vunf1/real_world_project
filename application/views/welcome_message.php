@@ -57,18 +57,23 @@
 				<?php //Nav Bar - Elements?>
 
 					*/?>
-				<li class="navbar-item " style="width: 33%;"  >
+				<li class="navbar-item " style="width: 33%; height: 100%"  >
 					<?php //Nav Bar - Content?>
-					
-						<a id="search-op" class="nav-link" href="#" style="width: 100%;" >Searching Building
+						<img src="search.png" style="height: 70%">
+
+						<a id="search-op" class="nav-link" href="#" style="width: 100%;height: 30%" >Searching Building
 						</a>
 						
 					</li>
-				<li id="nav-op" class="navbar-item" style="width: 33%;">
-					<a class="nav-link" href="#" style="width: 100%;height: 10%">Navigation Campus</a>
+				<li class="navbar-item" style="width: 33%;height: 100%">
+
+						<img src="route.png" style="height: 70%">
+					<a id="nav-op" class="nav-link" href="#" style="width: 100%;height: 30%">Navigation Campus</a>
 				</li>
-				<li id="scan-op" class="navbar-item" style="width: 33%;">
-					<a class="nav-link" href="#" style="width: 100%;height: 10%">Scan QR Code</a>
+				<li class="navbar-item" style="width: 33%;height: 100%">
+
+						<img src="qr-code.png" style="height: 70%">
+					<a id="scan-op"  class="nav-link" href="#" style="width: 100%;height: 30%">Scan QR Code</a>
 				</li>
 			</ul>
 		</div>
