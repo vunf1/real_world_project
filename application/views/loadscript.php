@@ -85,10 +85,10 @@ function shootServerInfo(){
  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-<link rel="stylesheet" href="assets/custom.css">
+<link rel="stylesheet" href="<?php base_url()?>assets/custom.css">
 
 
-<script type="text/javascript" src="assets/custom.js"></script>
+<script type="text/javascript" src="<?php base_url()?>assets/custom.js"></script>
 
 
 	<title>Index </title>
