@@ -1,6 +1,28 @@
 # :sunny: Real World Project :four_leaf_clover:
 University Navigation - Version Control 
 
+# Help Docs:
+Codeigniter: https://www.codeigniter.com/user_guide/index.html (Installed)
+Bootstrap: https://getbootstrap.com/docs/4.0/layout/grid/ (Installed)
+jQuery: https://api.jquery.com/ (Installed)
+Allertify: https://alertifyjs.com/examples.html (Not Installed)
+
+
+###### My Workflow remotely:
+editor
+> - [x] SublimeText 3 - with Packages ["Bootstrap 4 Autocomplete","jQuery Mobile Snippets","CodeIgniter Snippets"];
+remote server
+> - [x] LAMP (Linux) || XAMPP (Windows/Mac);
+debug
+> - [x] Chrome + Inspect tool(native installed);
+version control
+> - [x] Github Coventry;
+
+###### Live Debug from github repository
+
+	https://vunf1.coventry.domains/real_world_project/
+
+
 ###### config your console with your github account
 > - [ ] Windows user Install Git: https://git-scm.com/download/win</br>
 > - [ ] MAC user Install Git: https://git-scm.com/download/mac</br>

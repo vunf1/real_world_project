@@ -33,10 +33,10 @@ $(document).ready(function() {
 
 /* when element is trigger(clicked) load function/ execute same connection */
 $( "#search-op" ).on('click',function() {
-
+  allert("OKOK");
 
     $.ajax({
-     url:base_url()+ 'index.php/homecontroller/index_content',
+     url:base_url()+'index_content',
      method:"POST",
      dataType:'text',
      success:function(data){

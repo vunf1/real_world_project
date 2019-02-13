@@ -27,6 +27,8 @@ class Homecontroller extends CI_Controller {
         
 	    $this->load->helper('url');     
 	    $this->base = $this->config->item('base_url');
+	    $this->load->library('unit_test');
+	    $this->load->library('user_agent');
         //Load them in the constructor
         
 
@@ -51,6 +53,7 @@ class Homecontroller extends CI_Controller {
 
 	public function index_content()
 	{
+		var_dump($this->agent->is_browser());
 		$json=file_get_contents(base_url().'assets/document-building.json');
 		$result['json']=json_encode($json,true);
 
