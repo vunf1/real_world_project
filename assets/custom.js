@@ -18,7 +18,7 @@
 
 
 /* during the loading of the element (what2DO) */
-$(window).load(function() {
+$(document).load(function() {
 
 
 
@@ -32,7 +32,7 @@ $(document).ready(function() {
 
 
 /* when element is trigger(clicked) load function/ execute same connection */
-$( "#searchtext" ).on('click',function() {
+$( "#search-op" ).on('click',function() {
 
 
     $.ajax({
@@ -40,8 +40,6 @@ $( "#searchtext" ).on('click',function() {
      method:"POST",
      dataType:'text',
      success:function(data){
-
-     	console.log(data);
 
       $('#container').html("");//put empty all element
       
@@ -79,6 +77,7 @@ function buildList(data){
 };
 
 $( "#OK" ).on('click',function() {
+
 	allert("KKK");
 
 });

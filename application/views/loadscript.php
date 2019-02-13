@@ -58,6 +58,11 @@ function shootServerInfo(){
 	    } 
 	} 
 	echo '</table>' ; 
+	/*   
+#####
+#####   function to show inside a table system status
+#####
+	*/
 
 }
 ?>
@@ -73,17 +78,29 @@ function shootServerInfo(){
 
 
 
-			<!- Js - put locally futher on ->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+			        <!- Js -   ->
+<script src="<?php base_url()?>assets/jQuery_321_slim_min.js">
+	/* jQuery min 3.2.1 slim*/
+</script>
 
-			<!- Css - put locally futher on ->
+<script src="<?php base_url()?>assets/popper.min.js" >
+	/* Popper min - */
+</script>
 
- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+<script src="<?php base_url()?>assets/bootstrap4.js" >
+	/* Bootstrap 4 min*/
+</script>
+
+<script src="<?php base_url()?>assets/jQueryMobile_min_1.4.5.js"></script>
+
+
+			        <!- Css   ->
+
+ <link rel="stylesheet" href="<?php base_url()?>assets/jQueryMobile_min_1.4.5.css" />
+
+<link rel="stylesheet" href="<?php base_url()?>assets/bootstrap4.css" >
 
 <link rel="stylesheet" href="<?php base_url()?>assets/custom.css">
 

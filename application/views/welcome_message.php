@@ -60,14 +60,14 @@
 				<li class="navbar-item " style="width: 33%;"  >
 					<?php //Nav Bar - Content?>
 					
-						<a id="searchtext" class="nav-link" href="#" style="width: 100%;" >Searching Building
+						<a id="search-op" class="nav-link" href="#" style="width: 100%;" >Searching Building
 						</a>
 						
 					</li>
-				<li class="navbar-item" style="width: 33%;">
+				<li id="nav-op" class="navbar-item" style="width: 33%;">
 					<a class="nav-link" href="#" style="width: 100%;height: 10%">Navigation Campus</a>
 				</li>
-				<li class="navbar-item" style="width: 33%;">
+				<li id="scan-op" class="navbar-item" style="width: 33%;">
 					<a class="nav-link" href="#" style="width: 100%;height: 10%">Scan QR Code</a>
 				</li>
 			</ul>
