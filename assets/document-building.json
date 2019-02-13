@@ -1,0 +1,24 @@
+{
+
+  "ecc":{
+    "b-code": "ECC",
+    "author": "invalidParameter",
+    "description": "Invalid field selection items(snippet(title))'",
+    "gps-coordinates": ["-28.51682","105.51366"],
+    "image-dir": "dummy.png"
+   },
+  "hub":{
+    "b-code": "H",
+    "author": "invalidParameter",
+    "description": "Invalid field selection items(snippet",
+    "gps-coordinates":["-28.51682","105.51366"],
+    "image-dir": "dummy.png"
+   },
+  "biblio":{
+    "b-code": "LW",
+    "author": "invalidParameter",
+    "description": "Invalid field selection items(snippet(title))'",
+    "gps-coordinates": ["-28.51682","105.51366"],
+    "image-dir": "dummy.png"
+   }
+}

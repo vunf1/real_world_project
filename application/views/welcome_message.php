@@ -27,14 +27,16 @@
 ?>
 
 
-		<div id="nav-bar-full-width" >
+		<div id="nav-bar-full-width" style="height: 20%;" >
 
 			<?php //Nav Bar - FULL Element?>
 			<ul class="navbar navbar-fixed-top  bg-faded "> 
 
 				<?php //Nav Bar - More / dropdown menu?>
+				
+				<?php /*
 				<li class="navbar-item" style="width: 25%;">
-					<button style="width: 100%;height: 10%"
+					<button style="width: 30%;height: 10%"
 						type="button"
 						class="btn btn-secondary dropdown-toggle " 
 						data-toggle="dropdown" 
@@ -42,7 +44,7 @@
 						aria-expanded="false">
 					</button>
 
-						<div class="dropdown-menu bs-popover-right" style="width: 30%;">
+						<div class="dropdown-menu bs-popover-right" style="width: 10%;">
 							<a class="dropdown-item text-md-right" href="#">1</a>
 							<a class="dropdown-item" href="#">2</a>
 							<a class="dropdown-item" href="#">3</a>
@@ -53,14 +55,19 @@
 
 
 				<?php //Nav Bar - Elements?>
-				<li class="navbar-item " style="width: 25%;"  >
+
+					*/?>
+				<li class="navbar-item " style="width: 33%;"  >
 					<?php //Nav Bar - Content?>
-					<a class="nav-link btn loader" href="#" style="width: 100%;height: 10%" id="searchbuild_op" >Searching Building</a>
-				</li>
-				<li class="navbar-item" style="width: 25%;">
+					
+						<a id="searchtext" class="nav-link" href="#" style="width: 100%;" >Searching Building
+						</a>
+						
+					</li>
+				<li class="navbar-item" style="width: 33%;">
 					<a class="nav-link" href="#" style="width: 100%;height: 10%">Navigation Campus</a>
 				</li>
-				<li class="navbar-item" style="width: 25%;">
+				<li class="navbar-item" style="width: 33%;">
 					<a class="nav-link" href="#" style="width: 100%;height: 10%">Scan QR Code</a>
 				</li>
 			</ul>

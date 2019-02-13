@@ -15,19 +15,18 @@ University Navigation - Version Control
 extract from github
 > - [ ] git pull
 
-any error contact Joao Maia
+any error text a programmer
 
 ---
 
 ### Comments on the code
-> - [ ]  __<?php //<something> ?>__ to comment on html or javascript
+> - [ ]  '''__<?php //<something>||/<something> */ ?>__''' to comment on html or javascript
 can prevent futher reading from clients when inspect the elements.
-
-
-
-
+---
 ### BUGS FOUND
+> - [ ]Host - __Coventry.Domains__ unable to help for now in terms to solve it, since is a 'module' relative...
 
+> - [x]solution we will use __JSON documents__ instead of dataBase connection its only for __3 building__ later on if the problem fixed we could implement it.
 
 
 
@@ -35,38 +34,58 @@ can prevent futher reading from clients when inspect the elements.
 
 
 :exclamation: :trophy: Project Management :
-> - [x] :warning: __Flow(Class) Diagram(Code/UML)__ 
-> - [x] :warning: __ER Diagram(DB)__ 
+> - [ ] :warning: __SCRUM PAPERWORK(gglSpred)__ 
+> - [ ] :warning: __Flow(Class) Diagram(Code/UML)__ 
+> - [ ] :warning: __JSON TREE DIAGRAM__ 
 
 ---
 ### TO DO LIST :metal: CODERS
-- [ ] :warning: Choose a design
-- [ ] Get familiar with Web Programming - Javascript(Events/Dynamic HTML) / PHP(Basic/Syntax)
-- [ ] Get familiar with MVC Programming Model -  CodeIgniter
+- [ ] Page - signed to -
+- [ ] Page - signed to -
+- [ ] Page - signed to -
+- [ ] Implement Testing
+
+
+create a new __php file__ and name file w/ name of the page you will develop, no need to have <:html><!-full body-><:html> syntax, create to fill the __container__ on index, it will change between AJAX connections(load the new HTML, removing(cleanning) the old one )
 
 ---
 ### TO DO LIST :seedling: MULTIMEDIA
-- [ ] :warning: Choose a design
-- [ ] Get familiar with 3DsMax, Build 3D objects(singular)
-- [ ] Get familiar with 3DsMax, Animations
 
+- [ ] Draw a design (desktop portrait & landscape, Edward)
+
+---
 ### ESSENTIAL(To achieve high mark)
-- [ ] :soon:
+- [ ] 3D building
 
+
+
+---
 ### EXTRA 
 
 - [ ] Map 2D with 3D building w/Path route
+- [ ] Get familiar with Web Programming - Javascript(Events/Dynamic HTML) / PHP(Basic/Syntax) / Ajax XHResquests
+- [ ] Get familiar with MVC Programming Model -  CodeIgniter
+- [ ] Get familiar with 3DsMax, Build 3D objects(singular)
+ 
 
 
+
+
+---
 ### :white_check_mark: DONE :white_check_mark: 
 __week 0 & 1__
 - [x] Know Elements 
 - [x] Project discuss 
 - [x] What should __have__, __must__ and what if __have time__ discuss
 ---
+__weel 2 & week 3
+- [x] Draw a design (mobile portrait & landscape, Kristiana)
 
+- [x] Code Architecture HTML/JS/CSS - AJAX async();
+- [x] JSON file - basic structured;
+- [x] Index Front-end structure ;
 
-
+---
 
 ### Authors
 

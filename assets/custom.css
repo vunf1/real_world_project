@@ -1,3 +1,28 @@
+/*
+	Basic CSS syntax
+*/
+
 ul {
   		list-style-type: none;
 	}
+
+/*change proporties from element*/
+li{
+
+	word-wrap: break-word; 
+	
+	}
+
+/*change properties from classes*/
+.nav-link,.navbar-item{
+	text-align: center;
+	word-wrap: break-word; 
+	font-size: 10px;
+}
+
+/*change properties from id*/
+#nav-bar-full-width{
+	word-wrap: break-word;
+	background-color: cornflowerblue;
+
+}
