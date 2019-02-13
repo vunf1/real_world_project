@@ -2,15 +2,9 @@
 	Basic CSS syntax
 */
 
+/*change proporties from element*/
 ul {
   		list-style-type: none;
-	}
-
-/*change proporties from element*/
-li{
-
-	word-wrap: break-word; 
-	
 	}
 
 /*change properties from classes*/
@@ -26,7 +20,8 @@ li{
 	background-color: cornflowerblue;
 
 }
-
+/* multi changes from id*/
 #search-op, #nav-op, #scan-op{
 	color:white;
+	word-wrap: break-word;
 }

@@ -25,12 +25,12 @@
 		</div>
 	*/
 ?>
-
+		
 
 		<div id="nav-bar-full-width" style="height: 20%;" >
 
 			<?php //Nav Bar - FULL Element?>
-			<ul class="navbar navbar-fixed-top  bg-faded "> 
+			<ul id="naV" class="navbar navbar-fixed-top  bg-faded " style="width: 100%; height: 100%;"> 
 
 				<?php //Nav Bar - More / dropdown menu?>
 				
@@ -57,29 +57,31 @@
 				<?php //Nav Bar - Elements?>
 
 					*/?>
-				<li class="navbar-item " style="width: 33%; height: 100%"  >
+				<li id="search-op" class="navbar-item " style="width: 33%; height: 100%"  >
 					<?php //Nav Bar - Content?>
-						<img src="search.png" style="height: 70%">
+						<img src="search.png" style="height: 60%">
 
-						<a id="search-op" class="nav-link" href="#" style="width: 100%;height: 30%" >Searching Building
+						<a id="search-op" class="nav-link" href="#" style="width: 100%;height: 40%" >Searching <br> Building
 						</a>
+
 						
 					</li>
 				<li class="navbar-item" style="width: 33%;height: 100%">
 
-						<img src="route.png" style="height: 70%">
-					<a id="nav-op" class="nav-link" href="#" style="width: 100%;height: 30%">Navigation Campus</a>
+						<img src="route.png" style="height: 60%">
+					<a id="nav-op" class="nav-link" href="#" style="width: 100%;height: 40%">Navigation <br> Campus</a>
 				</li>
 				<li class="navbar-item" style="width: 33%;height: 100%">
 
-						<img src="qr-code.png" style="height: 70%">
-					<a id="scan-op"  class="nav-link" href="#" style="width: 100%;height: 30%">Scan QR Code</a>
+						<img src="qr-code.png" style="height: 60%">
+					<a id="scan-op"  class="nav-link" href="#" style="width: 100%;height: 40%">Scan <br>QR Code</a>
 				</li>
 			</ul>
+			<a class="btn-floating btn-sm blue-gradient"><i class="fas fa-star"></i></a>
 		</div>
-
 		<div id="container" class="container align-content-center">
 			
+		
 		</div>
 		
 
