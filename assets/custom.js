@@ -34,8 +34,9 @@ $(document).ready(function() {
 
 /* when element is trigger(clicked) load function/ execute same connection */
 $( "#search-op" ).on('click',function() {
-  alert("OKOK");
-
+  
+  
+  
     $.ajax({
      url:base_url()+'index.php/Homecontroller/index_content',
      method:"POST",

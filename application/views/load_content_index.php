@@ -1,12 +1,20 @@
 
 
 <?php 
-var_dump($json);
+//var_dump($json);
+//$jsonArray= current($json);
+//var_dump($jsonArray);
 
+foreach ($json as $key) {
+   
+    
+    echo "############?></br><?php";
+    echo $key->author;
+   //echo $key;
+    echo "111111111111111111111?></br><?php";
+    
+}
 
-var_dump("######################");
-var_dump($json[0]);
-var_dump("######################");
 
 
  ?>

@@ -25,7 +25,7 @@
 		</div>
 	*/
 ?>
-		
+
 
 		<div id="nav-bar-full-width" style="height: 20%;" >
 

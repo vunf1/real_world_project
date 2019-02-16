@@ -1,24 +1,24 @@
 {
 
   "ecc":{
-    "b-code": "ECC",
-    "author": "invalidParameter",
+    "buildCode": "ECC",
+    "author": "invaliDDDDDDD",
     "description": "Invalid field selection items(snippet(title))'",
-    "gps-coordinates": ["-28.51682","105.51366"],
+    "gpsCoordinates": ["-28.51682","105.51366"],
     "image-dir": "dummy.png"
    },
   "hub":{
-    "b-code": "H",
-    "author": "invalidParameter",
+    "buildCode": "Hub",
+    "author": "invaSSSSSSSSSameter",
     "description": "Invalid field selection items(snippet",
-    "gps-coordinates":["-28.51682","105.51366"],
+    "gpsCoordinates":["-28.51682","105.51366"],
     "image-dir": "dummy.png"
    },
   "biblio":{
-    "b-code": "LW",
-    "author": "invalidParameter",
+    "buildCode": "LW",
+    "author": "invZZZZZZZZZZZameter",
     "description": "Invalid field selection items(snippet(title))'",
-    "gps-coordinates": ["-28.51682","105.51366"],
+    "gpsCoordinates": ["-28.51682","105.51366"],
     "image-dir": "dummy.png"
    }
 }

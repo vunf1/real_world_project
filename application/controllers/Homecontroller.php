@@ -28,8 +28,9 @@ class Homecontroller extends CI_Controller {
 	    $this->load->helper('url');     
 	    $this->base = $this->config->item('base_url');
 	    $this->load->library('unit_test');
-	    $this->load->library('user_agent');
-        //Load them in the constructor
+		$this->load->library('user_agent');//Check if is mobile or desktop interface, can give a lot of information, check docs for more information;
+		
+        //Load them in the constructor - Pre-Load
         
 
 
@@ -56,7 +57,7 @@ class Homecontroller extends CI_Controller {
 		//var_dump($this->agent->is_mobile());
 		//var_dump($this->agent->is_browser());
 		$json=file_get_contents(base_url().'assets/document-building.json');
-		$result['json']=$json;
+		$result['json']=json_encode($json);
 		//json inside result will be a variable on the view to be handle
 		$this->load->view('load_content_index',$result);
 
