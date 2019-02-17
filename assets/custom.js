@@ -57,7 +57,20 @@ $( "#search-op" ).on('click',function() {
 
 
 });
-
+$( "#nav-op" ).on('click',function() {
+    $.ajax({
+        url:base_url()+'index.php/Homecontroller/index_contentNavCam',
+        method:"POST",
+        datatype:'text',
+        success:function(data){
+            $('#container').html("");
+            $('#container').html(data);
+        },
+        error: function(xhr, status, error){
+            alert('Search Error: '+ xhr.status+' - '+ error);
+        }
+    });
+});
 function base_url(route){
 
    // get the route segments

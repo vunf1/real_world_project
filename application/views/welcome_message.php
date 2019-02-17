@@ -66,7 +66,7 @@
 
 						
 					</li>
-				<li  class="navbar-item" id="nav-option" style="width: 33%;height: 100%">
+				<li id="nav-op" class="navbar-item" style="width: 33%;height: 100%">
 
 						<img  src="route.png" style="height: 60%">
 					<a  class="nav-link"  style="width: 100%;height: 40%">Navigation <br> Campus</a>

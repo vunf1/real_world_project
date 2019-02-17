@@ -47,6 +47,7 @@ class Homecontroller extends CI_Controller {
 		$result['json']=$this->datafunction->get_jsonfile_data();
 		//json inside result will be a variable on the view to be handle
 		$this->load->view('load_content_index',$result);
+		//$this->load->view('load_content_index',$result);
 
 
 	}

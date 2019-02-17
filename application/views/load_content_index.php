@@ -8,8 +8,27 @@
  * 
  * dynamic json output file, tables [Lists]
  */?>
- 
+<?php
+//code presented for the functionality search building 
+?>
+<div class="container-fluid">
 
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="text-center">
+				Search Building
+			</h3>
+            <form role="form">
+                <div class="form-group">
+					<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Example: Alan berry"  />
+				</div>
+            </form>
+            <h4 class="text-left">
+				Search Building
+			</h4>
+        </div>
+    </div>
+</div>
 <ul class="list-group list-group-flush">
 <?php
 for ($x=0; $x < count($json); $x++) { 

@@ -28,16 +28,16 @@ for ($x=0; $x < count($json); $x++) {
 	<div class="row">
 		<div class="col-md-12">
 			<h3 class="text-center">
-				h3. Lorem ipsum dolor sit amet.
+				Navigate Campus
 			</h3>
 			<form role="form">
 				<div class="form-group">
 					 
-					<input type="text" class="form-control" id="exampleInputEmail1" placholder="From"  />
+					<input type="text" class="form-control" id="exampleInputEmail1" placeholder="From"  />
 				</div>
 				<div class="form-group">
 					 
-					<input type="text" class="form-control" id="exampleInputPassword1" placholder="To"/>
+					<input type="text" class="form-control" id="exampleInputPassword1" placeholder="To"/>
 				</div> 
 				<button type="submit" class="btn btn-primary">
 					Search
