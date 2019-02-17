@@ -50,4 +50,19 @@ class Homecontroller extends CI_Controller {
 
 
 	}
+    
+    
+    
+	public function index_contentNavCam()
+	{
+		
+		//var_dump($this->agent->is_mobile());
+		//var_dump($this->agent->is_browser());
+		//$json=$this->Datafunction->get_jsonfile_data();
+		$result['json']=$this->datafunction->get_jsonfile_data();
+		//json inside result will be a variable on the view to be handle
+		$this->load->view('navigateCampus',$result);
+
+
+	}
 }

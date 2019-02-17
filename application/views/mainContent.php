@@ -61,29 +61,29 @@
 					<?php //Nav Bar - Content?>
 						<img src="search.png" style="height: 60%">
 
-						<a id="search-op" class="nav-link" style="width: 100%;height: 40%" >Searching <br> Building
+						<a id="search-op" class="nav-link" href="#" style="width: 100%;height: 40%" >Searching <br> Building
 						</a>
 
 						
 					</li>
-				<li  class="navbar-item" id="nav-option" style="width: 33%;height: 100%">
+				<li class="navbar-item" style="width: 33%;height: 100%">
 
-						<img  src="route.png" style="height: 60%">
-					<a  class="nav-link"  style="width: 100%;height: 40%">Navigation <br> Campus</a>
+						<img src="route.png" style="height: 60%">
+					<a id="nav-op" class="nav-link" href="#" style="width: 100%;height: 40%">Navigation <br> Campus</a>
 				</li>
-				<li id="scan-op" class="navbar-item" style="width: 33%;height: 100%">
+				<li class="navbar-item" style="width: 33%;height: 100%">
 
 						<img src="qr-code.png" style="height: 60%">
-					<a   class="nav-link" style="width: 100%;height: 40%">Scan <br>QR Code</a>
+					<a id="scan-op"  class="nav-link" href="#" style="width: 100%;height: 40%">Scan <br>QR Code</a>
 				</li>
 			</ul>
 			<a class="btn-floating btn-sm blue-gradient"><i class="fas fa-star"></i></a>
 		</div>
     
     
+    
 		<div id="container" class="container align-content-center">
-			
-		
+		<?php //div with the cotent code after the nav ?>
 		</div>
 		
 
