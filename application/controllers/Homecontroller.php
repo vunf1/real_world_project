@@ -4,22 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Homecontroller extends CI_Controller {
 
 	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
+	 * Index controller.
 	 */
-
-
 
     function __construct() {
         parent::__construct();
@@ -27,11 +13,11 @@ class Homecontroller extends CI_Controller {
         
 	    $this->load->helper('url');     
 	    $this->base = $this->config->item('base_url');
-	    $this->load->library('unit_test');
-		$this->load->library('user_agent');//Check if is mobile or desktop interface, can give a lot of information, check docs for more information;
+	    //autoload.config -$this->load->library('unit_test');
+		//autoload.config -$this->load->library('user_agent');//Check if is mobile or desktop interface, can give a lot of information, check docs for more information;
 		
         //Load them in the constructor - Pre-Load
-        
+       	$this->load->model('datafunction');
 
 
        
@@ -54,10 +40,11 @@ class Homecontroller extends CI_Controller {
 
 	public function index_content()
 	{
+		
 		//var_dump($this->agent->is_mobile());
 		//var_dump($this->agent->is_browser());
-		$json=file_get_contents(base_url().'assets/document-building.json');
-		$result['json']=json_encode($json);
+		//$json=$this->Datafunction->get_jsonfile_data();
+		$result['json']=$this->datafunction->get_jsonfile_data();
 		//json inside result will be a variable on the view to be handle
 		$this->load->view('load_content_index',$result);
 

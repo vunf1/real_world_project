@@ -1,24 +1,24 @@
-{
+[
 
-  "ecc":{
+  {
     "buildCode": "ECC",
     "author": "invaliDDDDDDD",
     "description": "Invalid field selection items(snippet(title))'",
     "gpsCoordinates": ["-28.51682","105.51366"],
     "image-dir": "dummy.png"
    },
-  "hub":{
+  {
     "buildCode": "Hub",
     "author": "invaSSSSSSSSSameter",
     "description": "Invalid field selection items(snippet",
     "gpsCoordinates":["-28.51682","105.51366"],
     "image-dir": "dummy.png"
    },
-  "biblio":{
+  {
     "buildCode": "LW",
     "author": "invZZZZZZZZZZZameter",
     "description": "Invalid field selection items(snippet(title))'",
     "gpsCoordinates": ["-28.51682","105.51366"],
     "image-dir": "dummy.png"
    }
-}
+  ]

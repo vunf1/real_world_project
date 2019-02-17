@@ -1,38 +1,48 @@
 
 
 <?php 
-//var_dump($json);
-//$jsonArray= current($json);
-//var_dump($jsonArray);
 
-foreach ($json as $key) {
-   
-    
-    echo "############?></br><?php";
-    echo $key->author;
-   //echo $key;
-    echo "111111111111111111111?></br><?php";
-    
+//var_dump(count($json));
+
+/**
+ * 
+ * dynamic json output file, tables [Lists]
+ */?>
+ 
+
+<ul class="list-group list-group-flush">
+<?php
+for ($x=0; $x < count($json); $x++) { 
+        //var_dump($json[$x]);
+        /*
+        echo "############<br>";
+        echo $json[$x]['buildCode'];
+        echo "<br>";
+        echo $json[$x]['author'];
+        echo "<br>";
+        echo $json[$x]['description'];
+        echo "<br>";
+        echo $json[$x]['gpsCoordinates'][0];
+        echo "<br>";
+        echo $json[$x]['gpsCoordinates'][1];
+        echo "<br>";
+        echo $json[$x]['image-dir'];
+*/
+        
+  echo "<li class='list-group-item' style='width:100%;height:20%;'>
+  <img src='dummy.png' style='width:30%;height:80%;'> ".$json[$x]['buildCode']." </li>";
+
+
+
 }
-
-
 
  ?>
 
-
-<ul class="list-group list-group-flush">
-  
-  <li class="list-group-item">First item</li>
-  <li class="list-group-item">Second item</li>
-  <li class="list-group-item">Third item</li>
-  <li class="list-group-item">Fourth item</li>
 </ul>
 
 
-
-
 <?php
-/* Json ErrorHandle*/
+/* Json ErrorHandle-not implemented corretly*/
 switch (json_last_error()) {
     case JSON_ERROR_NONE:
         ?><script>console.log(' - No errors');</script><?php
