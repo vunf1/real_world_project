@@ -36,9 +36,9 @@ version control
 
 
 ###### config your console with your github account
-> - [ ] Windows user Install Git: https://git-scm.com/download/win</br>
-> - [ ] MAC user Install Git: https://git-scm.com/download/mac</br>
-> - [ ] Linux insert command: sudo apt-get install git</br>
+```Windows user Install Git: https://git-scm.com/download/win```</br>
+```MAC user Install Git: https://git-scm.com/download/mac```</br>
+```Linux insert command: sudo apt-get install git```</br>
 
 > - [ ] git config --global user.email "(uni email)" </br>
 > - [ ] git config --global user.name "(uni email without @uni.coventry.ac.uk)" </br>
@@ -53,8 +53,8 @@ extract from github
 
 ---
 
-### Comments on the code
-> - [ ] ```<?php //<something> || /** <something> */ ?>``` <br> to comment on html or javascript, can prevent futher reading from clients when inspect the elements.
+### :exclamation: :warning: Comments on the code :exclamation:
+```<?php //<something> || /** <something> */ ?>``` <br> to comment on html or javascript, can prevent futher reading from clients when inspect the elements.
 ---
 ### BUGS FOUND
 > - [x]Host - __Coventry.Domains__ unable to help for now in terms to solve it, since is a 'module' relative...
@@ -66,29 +66,39 @@ extract from github
 ###### Back-Log
 
 
-:exclamation: :trophy: Project Management :
-> - [ ] :warning: __SCRUM PAPERWORK(gglSpred)__ 
-> - [ ] :warning: __Flow(Class) Diagram(Code/UML)__ 
-> - [ ] :warning: __JSON TREE DIAGRAM__ 
-
 ---
 ### TO DO LIST :metal: CODERS
-- [ ] Page - signed to -
-- [ ] Page - signed to -
-- [ ] Page - signed to -
-- [ ] Implement Testing
+- [ ] Page - search - Joao
+- [ ] Page - path route -
+- [ ] Page - qr -
+- [ ] Page - ??? -
+- [ ] Implement Testing - 
 
 
 create a new __php file__ and name file w/ name of the page you will develop, no need to have <:html><!- full body -><:\html> syntax, create to fill the __container__ on index, it will change between AJAX connections(load the new HTML, removing(cleanning) the old one )
 
+> - [ ] Better Design for objects - Antonio & Varun(add css classes (BootStrap or other))
+> - [ ] Put responsive to landscape 
+
+> - [ ] implement framework 'tree' handle 3DS image format [ASK/DownSample FOR A 3ds format ] 
 ---
 ### TO DO LIST :seedling: MULTIMEDIA
 
-- [ ] Draw a design (desktop portrait & landscape, Edward)
+- [ ] Draw a design (desktop portrait & landscape) - Edward
+- [ ] Draw a 3D Building [EEC, HUB, LIBRARY]
+- [ ] Draw a 3D Building [EEC] - sign
+- [ ] Draw a 3D Building [HUB] - sign
+- [ ] Draw a 3D Building [LIBRARY] - sign
 
+- [ ] 2D map with animation A 2 B (start basic)
 ---
 ### ESSENTIAL(To achieve high mark)
 - [ ] 3D building
+
+:exclamation: :trophy: Project Management :
+> - [ ] :warning: __SCRUM PAPERWORK(gglSpred)__ 
+> - [ ] :warning: __Flow(Class) Diagram(Code/UML)__ 
+> - [ ] :warning: __JSON TREE DIAGRAM__ 
 
 
 
