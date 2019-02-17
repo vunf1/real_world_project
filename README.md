@@ -54,7 +54,7 @@ extract from github
 ---
 
 ### Comments on the code
-> - [ ] '''<?php //<something> || /** <something> */ ?>''' <br> to comment on html or javascript, can prevent futher reading from clients when inspect the elements.
+> - [ ] ```<?php //<something> || /** <something> */ ?>``` <br> to comment on html or javascript, can prevent futher reading from clients when inspect the elements.
 ---
 ### BUGS FOUND
 > - [x]Host - __Coventry.Domains__ unable to help for now in terms to solve it, since is a 'module' relative...
