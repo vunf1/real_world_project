@@ -54,7 +54,7 @@ extract from github
 ---
 
 ### :exclamation: :warning: Comments on the code :exclamation:
- <br>
+
 ```<?php //<something> || /** <something> */ ?>```
  <br>
   comment as php, can prevent futher reading from clients when inspect the elements.
