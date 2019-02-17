@@ -54,12 +54,15 @@ extract from github
 ---
 
 ### :exclamation: :warning: Comments on the code :exclamation:
-```<?php //<something> || /** <something> */ ?>``` <br> to comment on html or javascript, can prevent futher reading from clients when inspect the elements.
+ <br>
+```<?php //<something> || /** <something> */ ?>```
+ <br>
+  comment as php, can prevent futher reading from clients when inspect the elements.
 ---
 ### BUGS FOUND
-> - [x]Host - __Coventry.Domains__ unable to help for now in terms to solve it, since is a 'module' relative...
+> - [x] Host - __Coventry.Domains__ unable to help for now in terms to solve it, since is a 'module' relative...
 
-> - [x]solution we will use __JSON documents__ instead of dataBase connection its only for __3 building__ later on if the problem fixed we could implement it.
+> - [x] solution we will use __JSON documents__ instead of dataBase connection its only for __3 building__ later on if the problem fixed we could implement it.
 
 > - [x] Problem fixed where Coventry.Domains didnt log the solution , was same miss configuration on framework files. cPanel give the answer when check error logs on the site
 
