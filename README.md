@@ -2,23 +2,35 @@
 University Navigation - Version Control 
 
 # Help Docs:
-Codeigniter: https://www.codeigniter.com/user_guide/index.html (Installed)
-Bootstrap: https://getbootstrap.com/docs/4.0/layout/grid/ (Installed)
-jQuery: https://api.jquery.com/ (Installed)
-Allertify: https://alertifyjs.com/examples.html (Not Installed)
+Codeigniter: https://www.codeigniter.com/user_guide/index.html (Installed)<br>
+Bootstrap: https://getbootstrap.com/docs/4.0/layout/grid/ (Installed)<br>
+jQuery: https://api.jquery.com/ (Installed)<br>
+Allertify: https://alertifyjs.com/examples.html (Not Installed)<br>
 
 
-###### My Workflow remotely:
+###### My Workflow remotely(Linux):
 editor
 > - [x] SublimeText 3 - with Packages ["Bootstrap 4 Autocomplete","jQuery Mobile Snippets","CodeIgniter Snippets"];
 remote server
-> - [x] LAMP (Linux) || XAMPP (Windows/Mac);
+> - [x] LAMP (Linux) ;
 debug
 > - [x] Chrome + Inspect tool(native installed);
 version control
 > - [x] Github Coventry;
 
-###### Live Debug from github repository
+
+###### My Workflow remotely(Win):
+editor
+> - [x] VSCode - with Extensions ["Live Server","Document This","Sublime Text Keymap"];
+remote server
+> - [x]  XAMPP (Windows/Mac);
+debug
+> - [x] Chrome + Inspect tool(native installed);
+version control
+> - [x] Github Coventry;
+
+
+###### Release Version - avaiable from github repository
 
 	https://vunf1.coventry.domains/real_world_project/
 
@@ -42,8 +54,7 @@ extract from github
 ---
 
 ### Comments on the code
-> - [ ]  __'''<?php //<something> || /* <something> */ ?>'''__ to comment on html or javascript
-can prevent futher reading from clients when inspect the elements.
+> - [ ] '''<?php //<something> || /** <something> */ ?>''' <br> to comment on html or javascript, can prevent futher reading from clients when inspect the elements.
 ---
 ### BUGS FOUND
 > - [x]Host - __Coventry.Domains__ unable to help for now in terms to solve it, since is a 'module' relative...
