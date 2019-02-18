@@ -30,8 +30,10 @@ $(document).ready(function() {
 
 });
 
+$("#textSearch").on("keyup", function() {
 
-
+    console.log($(this).attr('value'));
+});
 /* when element is trigger(clicked) load function/ execute same connection */
 $( "#search-op" ).on('click',function() {
   
