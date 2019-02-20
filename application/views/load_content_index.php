@@ -23,8 +23,6 @@ $('#textSearch').on('keyup keypress', function(e) {
   });
 </script>
 <div class="container-fluid">
-
-
     <div class="row">
         <div class="col-md-12" id="textboxDIV" >
             <h3 class="text-center">
@@ -32,12 +30,10 @@ $('#textSearch').on('keyup keypress', function(e) {
 			</h3>
             <form role="form">
                 <div class="form-group">
-					<input type="text" class="form-control" id="textSearch" placeholder="Example: Alan berry"  />
+					<input type="text" class="form-control" id="textSearch" placeholder="Example: Alan berry"/>
+                    <input type="submit" value="Search" class="btnInput" id="btnInput"></input>
 				</div>
             </form>
-            <h4 class="text-left">
-				Search Building
-			</h4>
 <?php
 for ($x=0; $x < count($json); $x++) { 
         //var_dump($json[$x]);

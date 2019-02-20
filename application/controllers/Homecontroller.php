@@ -48,10 +48,7 @@ class Homecontroller extends CI_Controller {
 		//json inside result will be a variable on the view to be handle
 		$this->load->view('load_content_index',$result);
 		//$this->load->view('load_content_index',$result);
-
-
 	}
-    
     
     
 	public function index_contentNavCam()
@@ -66,4 +63,10 @@ class Homecontroller extends CI_Controller {
 
 
 	}
+    
+    //function called to connect with the model to send the data inserted in the buildings search bar
+    function searchBooks() {
+        $postlist['buildingSearch'] = $this->Datafunction->getSearchBook($this->input->post('search'));
+        $this->load->view('load_content_index.php', $postlist);
+    }
 }

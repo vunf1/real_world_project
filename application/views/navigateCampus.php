@@ -1,5 +1,9 @@
 
 <?php
+
+
+//this file is the view of the campus navigation, (the 2nd functionality in the nav bar )
+
 for ($x=0; $x < count($json); $x++) { 
         //var_dump($json[$x]);
         /*

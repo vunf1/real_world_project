@@ -26,7 +26,18 @@
 	*/
 ?>
 
-
+    
+    
+    
+    
+        
+    <?php //this file executes the nav bar with the 3 main functionalities ?>
+    
+    
+    
+    
+    
+    
 		<div id="nav-bar-full-width" style="height: 20%;" >
 
 			<?php //Nav Bar - FULL Element?>
