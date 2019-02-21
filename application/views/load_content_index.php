@@ -1,7 +1,8 @@
 
 
 <?php 
-
+//code presented for the functionality search building 
+//
 //var_dump(count($json));
 
 /**
@@ -9,7 +10,7 @@
  * dynamic json output file, tables [Lists]
  */?>
 <?php
-//code presented for the functionality search building 
+
 ?>
 
 <div class="container-fluid">
@@ -26,7 +27,8 @@
                 </ul>
             </div>
             <div id="listContainer">
-                <ul class="list-unstyled">
+                <div class='row'>
+                 <!-- <ul class="list-unstyled"> -->
                     <?php
                     for ($x=0; $x < count($json); $x++) { 
                             //var_dump($json[$x]);
@@ -44,19 +46,47 @@
                             echo "<br>";
                             echo $json[$x]['image-dir'];
                     */
-                            
-                    echo "<li class='list-group-item' style='text-align: left;width:100%;height:20%;'>
-                    <img src='dummy.png' style='width:30%;height:80%;'><a> ".$json[$x]['buildCode']."</a><br>
-                    ".$json[$x]['description']." </li>";
-
-
-
+                    $buildingName = $json[$x]['name'];
+                    $image = $json[$x]['image-dir'];
+                    $address = $json[$x]['address'];
+                    $description = $json[$x]['description'];
+                    //echo $buildingName;
+                    //echo "<li class='list-group-item' style='text-align:left; width:100%; height:20%;'>
+                    //<img src=$image style='width:30%;height:80%;'><a> ".$json[$x]['buildCode']."</a><br>
+                    //".$json[$x]['description']." </li>";
+                    
+                        
+                    //trying to present data in another way
+                    //this div contains 2 divs inside, one small which contains the image and
+                    //another one that contains a table with the information needed
+                    echo"
+                    <div class='col-md-4'>
+                        <li class='list-group-item' style='text-align:center; width:100%; height:20%;'>
+                            <img src=$image style='width:30%;height:80%;'>
+                        </li>
+                    </div>
+                    <div class='col-md-8'>
+                        <table class='table table-hover'>
+                            <tr>
+                               <td><b>$buildingName</b></td>
+                            </tr>
+                            <tr>
+                                <td>$address</td>
+                            </tr>
+                            <tr>
+                               <td>$description</td>
+                            </tr>
+                        </table>
+                    </div>
+                    ";
+                        
                     }
 
                     ?>
 
-                </ul>
-            </div><!--List Container -->
+                <!--</ul>-->
+                </div>
+            </div> <!--List Container -->
         </div>
     </div>
 </div>

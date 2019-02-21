@@ -1,24 +1,27 @@
 [
 
   {
-    "buildCode": "ECC",
-    "author": "invaliDDDDDDD",
-    "description": "Building build in 1999,....",
-    "gpsCoordinates": ["-28.51682","105.51366"],
+    "buildCode": "ECB",
+    "name":"Engineering & Computing Building",
+    "description": "Built in 2012 and already toped-up with the lattest technologies like UK's largest magnet solely used by Faculty of Engineering",
+    "faciliites":["Computing","Starbucks","Flight Simulators"],
+    "address": "CV1 2JH",
     "image-dir": "dummy.png"
    },
   {
     "buildCode": "HUB",
-    "author": "invaSSSSSSSSSameter",
-    "description": "Building build in 1999,....",
-    "gpsCoordinates":["-28.51682","105.51366"],
+    "name": "TheHub",
+    "description": "Completed in 2011 TheHub is a welcomming social space for student and also provide services like doctors' surgery and faith center",
+    "faciliites": ["Doctors' surgery","Faith Center","Hairdresser","Costa Coffe","Students' Union"],
+    "address":"CV1 5FB",
     "image-dir": "dummy.png"
    },
   {
-    "buildCode": "LW",
-    "author": "invZZZZZZZZZZZameter",
-    "description": "Building build in 1999,....",
-    "gpsCoordinates": ["-28.51682","105.51366"],
+    "buildCode": "WM",
+    "name":"William Morris",
+    "description": "Used in 1910 as the factory of the Morris car company for the engine production ",
+    "faciliites":["Business","Law"],
+    "address": "CV1 5DL",
     "image-dir": "dummy.png"
    }
   ]
