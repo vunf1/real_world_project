@@ -66,15 +66,18 @@ extract from github
 
 > - [x] Problem fixed where Coventry.Domains didnt log the solution , was same miss configuration on framework files. cPanel give the answer when check error logs on the site
 
+
+> - [ ] javascript [custom.js] dont load same function its needed to put them on the new page load.
+
 ###### Back-Log
 
 
 ---
 ### TO DO LIST :metal: CODERS
 - [ ] Page - search - Joao
-- [ ] Page - path route -
-- [ ] Page - qr -
-- [ ] Page - ??? -
+- [ ] Page - path route - Roque
+- [ ] Page - qr - Varun || Antonio
+- [ ] Better Design - Varun || Antonio 
 - [ ] Implement Testing - 
 
 
@@ -82,8 +85,12 @@ create a new __php file__ and name file w/ name of the page you will develop, no
 
 > - [ ] Better Design for objects - Antonio & Varun(add css classes (BootStrap or other))
 > - [ ] Put responsive to landscape 
-
+:warning:
 > - [ ] implement framework 'tree' handle 3DS image format [ASK/DownSample FOR A 3ds format ] 
+> - [ ] Fix start Ugly layout by when Ready(loaded all code) show objects
+
+
+
 ---
 ### TO DO LIST :seedling: MULTIMEDIA
 

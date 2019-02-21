@@ -18,18 +18,29 @@
 
 
 
-/* when element is full load (ready to execute) */
-$(document).ready(function() {
-
-});
-
-$("#textSearch").on("keyup", function() {
-
-    console.log($(this).attr('value'));
-});
-
 /* when element is trigger(clicked) load function/ execute same connection */
-$( "#search-op" ).on('click',function() {
+
+function  alertSuccess(data) {
+    //Customise alert function
+    //Read a String to display it
+    var delay = alertify.get('notifier','delay');
+    alertify.set('notifier','delay', 1);
+    alertify.set('notifier','position', 'bottom-right');
+    alertify.success(data);
+    alertify.set('notifier','delay', delay);
+};
+
+  function  alertError(data) {
+    //Customise alert function
+    //Read a String to display it
+    var delay = alertify.get('notifier','delay');
+    alertify.set('notifier','delay', 1);
+    alertify.set('notifier','position', 'bottom-right');
+    alertify.warning(data);
+    alertify.set('notifier','delay', delay);
+};
+
+$( "#search-op" ).on('click',function() {//Joao
   
   //Trigger Page Search
   
@@ -70,6 +81,9 @@ $( "#nav-op" ).on('click',function() {
         }
     });
 });
+
+
+
 function base_url(route){
 
    // get the route segments
@@ -79,3 +93,5 @@ function base_url(route){
    // make base_url be the origin plus the path to the route
    return window.location.origin + pathArray.slice(0,indexOfSegment).join('/') + '/';
 };
+
+

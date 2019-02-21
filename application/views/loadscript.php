@@ -60,7 +60,7 @@ function shootServerInfo(){
 	echo '</table>' ; 
 	/*   
 #####
-#####   function to show inside a table system status
+#####   function to show system status
 #####
 	*/
 
@@ -96,6 +96,8 @@ function shootServerInfo(){
 <!--<script src="<?php //base_url()?>assets/jQueryMobile_min_1.4.5.js"></script>
 -->
 
+<script type="text/javascript" src="<?php base_url()?>assets/allertify/alertify.js"></script>
+<link rel="stylesheet" href="<?php base_url()?>assets/allertify/css/alertify.css" />
 <script type="text/javascript" src="<?php base_url()?>assets/custom.js"></script>
 
 			        <!- Css   ->
