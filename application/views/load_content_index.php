@@ -109,7 +109,7 @@ $('#solution_name').keyup(function(){//Joao
   //console.log(search);
   if(search != ''){
         $.ajax({
-            url:base_url()+"index.php/Homecontroller/searchBooks",
+            url:base_url()+"index.php/Homecontroller/searchBuildings",
             method:"POST",
             dataType:'json',
             data:{'searchTxT':search},
@@ -145,7 +145,6 @@ $('#solution_name').keyup(function(){//Joao
 
  function buildSearchList(data){//Joao
      //generate match on jsonFile
-     //Need Improve List Design and DAta inside Json
     
     var list = $('<ul   align="center" ></ul>').addClass( "list-unstyled" )
         head=("<li class='list-group-item left' style='text-align: left;width:100%;height:20%;'>");

@@ -30,7 +30,7 @@ function  alertSuccess(data) {
     alertify.set('notifier','delay', delay);
 };
 
-  function  alertError(data) {
+function  alertError(data) {
     //Customise alert function
     //Read a String to display it
     var delay = alertify.get('notifier','delay');
@@ -40,8 +40,7 @@ function  alertSuccess(data) {
     alertify.set('notifier','delay', delay);
 };
 
-$( "#search-op" ).on('click',function() {//Joao
-  
+$('#search-op').on('click',function(){//Joao
   //Trigger Page Search
   
     $.ajax({
@@ -50,19 +49,15 @@ $( "#search-op" ).on('click',function() {//Joao
      dataType:'text',
      success:function(data){
 
-      $('#container').html("");//put empty all element
+      $('#container').html("");//put empty all elements
       
       $('#container').html(data);
       
-          },
+     },
      error: function(xhr, status, error) { 
      	alert('Search Error: '+ xhr.status+ ' - '+ error); 
      }
  	});
-	
-
-
-
 });
 
 $( "#nav-op" ).on('click',function() {
@@ -93,5 +88,7 @@ function base_url(route){
    // make base_url be the origin plus the path to the route
    return window.location.origin + pathArray.slice(0,indexOfSegment).join('/') + '/';
 };
-
+function mouseoverOver(){
+    document.getElementById('')
+}
 

@@ -25,18 +25,8 @@
 		</div>
 	*/
 ?>
-
-    
-    
-    
-    
         
     <?php //this file executes the nav bar with the 3 main functionalities ?>
-    
-    
-    
-    
-    
     
 		<div id="nav-bar-full-width" style="height: 20%;" >
 
@@ -70,11 +60,12 @@
 					*/?>
 				<li id="search-op" class="navbar-item " style="width: 33%; height: 100%"  >
 					<?php //Nav Bar - Content?>
-						<img src="search.png" style="height: 60%">
+                        <div mouseover="mouseOverNav()">
+                            <img src="search.png" id="navButtons" style="height: 60%">
 
-						<a id="search-op" class="nav-link" style="width: 100%;height: 40%" >Searching <br> Building
-						</a>
-
+                            <a id="search-op navButtons" class="nav-link" style="width: 100%;height: 40%">Searching <br> Building
+                            </a>
+                        </div>
 						
 					</li>
 				<li id="nav-op" class="navbar-item" style="width: 33%;height: 100%">
@@ -96,12 +87,17 @@
 			
 		
 		</div>
-		
+        <?php //load the javascript functions file ?>
+        <script type="text/javascript" src="<?php base_url()?>assets/custom.js"></script>
+<script>
 
+function mouseOverNav() {
+  document.getElementById("navButtons").style.color = "RED";
+}
 
-
-
-
-
+function mouseOutNav() {
+  document.getElementById("navButtons").style.color = "WHITE";
+}
+</script>
 </body>
 </html>
