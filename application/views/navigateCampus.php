@@ -102,7 +102,7 @@ $('#secondBuilding').keyup(function(){ //antonio
            success:function(data){
            console.log(data); //print "data" to the console
            alertSuccess("Found"); //call the message to the user saying "Found"
-           call3dmodel();
+           //call3dmodel();
            //CALL HERE THE FUNCTION TO LOAD THE ROUTE IMAGE
            },error: function(xhr, status, error){
                alertError ("Not Found");
@@ -113,7 +113,7 @@ $('#secondBuilding').keyup(function(){ //antonio
 });
 
 function call3dmodel(){  //antonio
-    consolo.log("call the 3d model")
+    console.log("call the 3d model")
 }
 $('#validateSearch').on('click', function(){ //antonio
     var fromInput = $('#firstBuilding').val(); //put the tu contents of the search boxes into the variables
