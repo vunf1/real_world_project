@@ -116,7 +116,7 @@ $('#solution_name').keyup(function(){//Joao
             success:function(data){
                 // 
                 console.log(data);
-                $("#listContainer").html("");
+                $("#listContainer").html(""); // clear the div where the id = listContainer 
                 alertSuccess("Found");
                 buildSearchList(data);
 
@@ -143,16 +143,21 @@ $('#solution_name').keyup(function(){//Joao
  });
  
 
- function buildSearchList(data){//Joao
+ function buildSearchList(data){//Joao & Antonio
      //generate match on jsonFile
-    
+    var buildingName = data['name'];
+    var image = data['image-dir'];
+    var address = data['address'];
+    var description = data['description'];
     var list = $('<ul   align="center" ></ul>').addClass( "list-unstyled" )
-        head=("<li class='list-group-item left' style='text-align: left;width:100%;height:20%;'>");
+        head=("<div class='col-md-4'><li class='list-group-item left' style='text-align: center;width:100%;height:20%;'><img src="+image+" style='width:30%;height:80%;'></li></div>");
 
         
-        head+="<img src='dummy.png' style='width:30%;height:80%;'><a>"+data['buildCode']+"</a><br>"+data['description'];
+        head+="<div class='col-md-8'><table class='table table-hover'><tr><td><b>"+buildingName+"</b><td></tr>";
+        head+="<tr><td>"+address+"</td></tr>";
+        head+="<tr><td>"+description+"</td></tr>"
         
-        head+="</li>"
+        head+="</table></div>"
         
         $(head).appendTo(list);
         //console.log(TableRow);

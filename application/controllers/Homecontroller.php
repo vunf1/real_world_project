@@ -17,13 +17,7 @@ class Homecontroller extends CI_Controller {
 		$this->load->library('form_validation');
 	    //autoload.config -$this->load->library('unit_test');
 		//autoload.config -$this->load->library('user_agent');//Check if is mobile or desktop interface, can give a lot of information, check docs for more information;
-		5
        	$this->load->model('datafunction');
-
-
-       
-        
-        
     }
 
 

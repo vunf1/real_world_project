@@ -27,7 +27,7 @@
 ?>
         
     <?php //this file executes the nav bar with the 3 main functionalities ?>
-    
+    <script type="text/javascript" src="<?php base_url()?>assets/custom.js"></script>
 		<div id="nav-bar-full-width" style="height: 20%;" >
 
 			<?php //Nav Bar - FULL Element?>
@@ -63,7 +63,7 @@
                         <div mouseover="mouseOverNav()">
                             <img src="search.png" id="navButtons" style="height: 60%">
 
-                            <a id="search-op navButtons" class="nav-link" style="width: 100%;height: 40%">Searching <br> Building
+                            <a id="search-op" class="nav-link" style="width: 100%;height: 40%">Searching <br> Building
                             </a>
                         </div>
 						
@@ -88,7 +88,7 @@
 		
 		</div>
         <?php //load the javascript functions file ?>
-        <script type="text/javascript" src="<?php base_url()?>assets/custom.js"></script>
+        
 <script>
 
 function mouseOverNav() {
