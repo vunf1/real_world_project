@@ -72,7 +72,8 @@ $('#firstBuilding').keyup(function(){
         $.ajax({
             //ajax connection with the function searchTxT at the controller 
             url:base_url()+"index.php/Homecontroller/searchBuildings", //specify the function in the controller 
-            method:"POST", //means that goes encrypted 
+            method:"POST", 
+            //means that goes encrypted 
             datatype:'json',
             data:{'searchTxT':from}, //call the function with the variable 'from' in ajax
             success:function(data){

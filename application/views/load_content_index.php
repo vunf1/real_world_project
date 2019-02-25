@@ -26,30 +26,55 @@
                     </li>
                 </ul>
             </div>
-            <div id="listContainer">
-                <div class='row'>
-                 <!-- <ul class="list-unstyled"> -->
-                    <?php
+            <style type="text/css">
+
+                .left-side {
+                margin: 0;
+                float: left;
+                width: 30%;
+                }
+                .right-side {
+                margin: 0;
+                float: left;
+                width: 70%;
+
+                }
+                .split-items .list-group-item.left-side{
+                    
+                border-top-right-radius:0px;
+                border-bottom-right-radius:0px;
+                }
+
+                .split-items .list-group-item.right-side{
+                    border:0;
+                    
+                    text-align: justify;
+                border-top-left-radius:0px;
+                border-bottom-left-radius:0px;
+                border-bottom-right-radius:0px;
+                border-top-right-radius:4px;
+                }
+                .clearfix:hover{
+                    border:1px solid #7FFAFF;
+                    
+                }
+
+            </style>
+                <div   id="listContainer">
+                    
+
+
+                <?php
                     for ($x=0; $x < count($json); $x++) { 
                             //var_dump($json[$x]);
                             /*
-                            echo "############<br>";
-                            echo $json[$x]['buildCode'];
-                            echo "<br>";
-                            echo $json[$x]['author'];
-                            echo "<br>";
-                            echo $json[$x]['description'];
-                            echo "<br>";
-                            echo $json[$x]['gpsCoordinates'][0];
-                            echo "<br>";
-                            echo $json[$x]['gpsCoordinates'][1];
-                            echo "<br>";
-                            echo $json[$x]['image-dir'];
+                            
                     */
                     $buildingName = $json[$x]['name'];
                     $image = $json[$x]['image-dir'];
                     $address = $json[$x]['address'];
                     $description = $json[$x]['description'];
+                    $buildCode = $json[$x]['buildCode'];
                     //echo $buildingName;
                     //echo "<li class='list-group-item' style='text-align:left; width:100%; height:20%;'>
                     //<img src=$image style='width:30%;height:80%;'><a> ".$json[$x]['buildCode']."</a><br>
@@ -59,34 +84,30 @@
                     //trying to present data in another way
                     //this div contains 2 divs inside, one small which contains the image and
                     //another one that contains a table with the information needed
-                    echo"
-                    <div class='col-md-4'>
-                        <li class='list-group-item' style='text-align:center; width:100%; height:20%;'>
-                            <img src=$image style='width:30%;height:80%;'>
-                        </li>
+                    echo "
+                    <div class=' container div_build' id='".$buildCode."' >
+                        <div class='list-group'>
+                        
+                            <div class='clearfix split-items'>
+                                
+                               <img class='list-group-item left-side'style='width:30%;height:25%;' src=$image >
+                                
+                                
+                                <p  class='list-group-item right-side '>$buildingName</p>
+                                
+                                <p  class='list-group-item right-side '>$description</p>
+                                
+
+                            </div>
+                        </div>
                     </div>
-                    <div class='col-md-8'>
-                        <table class='table table-hover'>
-                            <tr>
-                               <td><b>$buildingName</b></td>
-                            </tr>
-                            <tr>
-                                <td>$address</td>
-                            </tr>
-                            <tr>
-                               <td>$description</td>
-                            </tr>
-                        </table>
-                    </div>
+                    <br>
                     ";
                         
                     }
 
-                    ?>
-
-                <!--</ul>-->
-                </div>
-            </div> <!--List Container -->
+                ?>
+                </div><!--List Container -->
         </div>
     </div>
 </div>
@@ -108,20 +129,28 @@ $('#solution_name').keyup(function(){//Joao
   var search = $(this).val();
   //console.log(search);
   if(search != ''){
+      alertWarning("Searching for "+search);
+      
         $.ajax({
             url:base_url()+"index.php/Homecontroller/searchBuildings",
             method:"POST",
-            dataType:'json',
+            dataType:'text',
             data:{'searchTxT':search},
             success:function(data){
-                // 
-                console.log(data);
-                $("#listContainer").html(""); // clear the div where the id = listContainer 
-                alertSuccess("Found");
-                buildSearchList(data);
+                //console.log($.parseJSON(data));
+                //$("#listContainer").html(""); // clear the div where the id = listContainer 
+                if(data){
+                    alertSuccess("Found "+search);
+                }else{
+                    alertError("Nothing Found");
+                };
+                $("#listContainer").html("");
+                buildSearchList($.parseJSON(data),"listContainer");
+                //buildSearchList(data,"listContainer");
+                l
 
             },error: function(xhr, status, error){ 
-                //After 3 bad inputs ,fails and show this(Idea for later  -  counter >3=action)
+                /*After 3 bad inputs ,fails and show this(Idea for later  -  counter >3=action)*/
                 alertError("Not Found");
 
                 //alert('Search Error: '+ xhr.status+ ' - '+ error); 
@@ -143,26 +172,57 @@ $('#solution_name').keyup(function(){//Joao
  });
  
 
- function buildSearchList(data){//Joao & Antonio
-     //generate match on jsonFile
-    var buildingName = data['name'];
-    var image = data['image-dir'];
-    var address = data['address'];
-    var description = data['description'];
-    var list = $('<ul   align="center" ></ul>').addClass( "list-unstyled" )
-        head=("<div class='col-md-4'><li class='list-group-item left' style='text-align: center;width:100%;height:20%;'><img src="+image+" style='width:30%;height:80%;'></li></div>");
+ function buildSearchList(mydata,appendToElementID){//Joao 
+     //generate dinamic html code to present data retrieve from server
+    delevopPopupDinamic(mydata);
+    $.each(mydata,function(index, data) {
 
-        
-        head+="<div class='col-md-8'><table class='table table-hover'><tr><td><b>"+buildingName+"</b><td></tr>";
-        head+="<tr><td>"+address+"</td></tr>";
-        head+="<tr><td>"+description+"</td></tr>"
-        
-        head+="</table></div>"
-        
-        $(head).appendTo(list);
-        //console.log(TableRow);
-        return ($(list).appendTo("#listContainer"));
+        var buildingName = data['name'];
+        var image = data['image-dir'];
+        var address = data['address'];
+        var description = data['description'];
+
+        var buildCode = data['buildCode'];
+
+
+
+
+
+
+        var list = $('<div class=" container div_build" id="'+buildCode+'" ></div>');
+            head=("<div class='clearfix split-items'><img class='list-group-item left-side'style='width:30%;height:25%;' src='"+image+"' ><p  class='list-group-item right-side '>"+buildingName+"</p><p  class='list-group-item right-side '>"+description+"</p></div><br>");
+
+            
+            
+            $(head).appendTo(list);
+            
+            return ($(list).appendTo("#"+appendToElementID));
+    
+    });
+ };
+ function modelTrigger(){
+    var closable = alertify.alert().setting('closable');
+    //grab the dialog instance using its parameter-less constructor then set multiple settings at once.
+    alertify.alert()
+      .setting({
+        'title':'Done',
+        'label':'Done',
+        'message': '<div class="container"><img src="dummy.png"><a>Ola</a></div>' ,
+        'onok': function(){ alertify.success('Great');}
+      }).show();
+};
+ function delevopPopupDinamic(mydata){
+    
+    $.each(mydata,function(index, data) {
+        $(document).on('click', '#'+data['buildCode'] , function(){
+            modelTrigger();
+        });
+
+    }); 
+
 
  };
 
+ 
 </script>
+<link rel="stylesheet" href="<?php base_url()?>assets/custom.css">

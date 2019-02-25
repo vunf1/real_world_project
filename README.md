@@ -62,32 +62,60 @@ extract from github
 ### BUGS FOUND
 > - [x] Host - __Coventry.Domains__ unable to help for now in terms to solve it, since is a 'module' relative...
 
-> - [x] solution we will use __JSON documents__ instead of dataBase connection its only for __3 building__ later on if the problem fixed we could implement it.
+> - [x] solution we will use __JSON documents__ instead of dataBase connection, less sql_ExIm_ports, its only for __3 building__ later on if the problem fixed we could implement it.
 
-> - [x] Problem fixed where Coventry.Domains didnt log the solution , was same miss configuration on framework files. cPanel give the answer when check error logs on the site
+> - [x] Problem fixed where Coventry.Domains didnt log the solution , was same miss configuration on framework files. cPanel give the answer when check error logs on the site, ssh channel created;
 
 
-> - [ ] javascript [custom.js] dont load same function its needed to put them on the new page load.
+> - [ ] javascript [custom.js] dont load same function its needed to put them on the new page load. and same jQuery not loaded because miss jQuery files;
+
+
 
 ###### Back-Log
+//Joao MVC architure/security provider by CodeIgniter
 
+
+- [x] server security Architure skeleton, comunication between <br> View(HTML PAGES - from view folder, .php format, with ajax connection- create security) <br> Controller(HomeController, receive post requests from View folder pages anames) <br> Model(Database, function on controller who save data extract from queries or same function extracting same data from files , no-sql ).
+
+View->Controller:
+create a new __php file__ and name it(p/on folder View), call it by the controller(HomeController) by Ajax functions using jQuery(javaScript framework) <br>
+url:<?php base_url()?>+"/function(onHomeController)" <br>
+sametimes  controller map route needed './f'<br>
+on HomeController
+
+
+View->Controller->Model:
+
+Controller is waiting for data via POST request, from View, grab that data<br>
+- ask to model a function that retrieve the data needed to fulfil the task;
+- data output php objects/instance, var_dump($data), like console.log or cout ;<br>
+- save data output - $Variable=<br>
+
+---
 
 ---
 ### TO DO LIST :metal: CODERS
-- [ ] Page - search - Joao
 - [ ] Page - path route - Roque
 - [ ] Page - qr - Varun || Antonio
 - [ ] Better Design - Varun || Antonio 
 - [ ] Implement Testing - 
+- [ ] server Architure in 'paper' (Dont know if is needed)(MVC).
+
+- [ ] Design popUp content
 
 
-create a new __php file__ and name file w/ name of the page you will develop, no need to have <:html><!- full body -><:\html> syntax, create to fill the __container__ on index, it will change between AJAX connections(load the new HTML, removing(cleanning) the old one )
 
-> - [ ] Better Design for objects - Antonio & Varun(add css classes (BootStrap or other))
+
+
+ syntax, create to fill the __container__ on index, it will change between AJAX connections(load the new HTML, removing(cleanning) the old one )
+
+
 > - [ ] Put responsive to landscape 
 :warning:
-> - [ ] implement framework 'tree' handle 3DS image format [ASK/DownSample FOR A 3ds format ] 
-> - [ ] Fix start Ugly layout by when Ready(loaded all code) show objects
+> - [ ] implement framework 'tree' handle 3DS image format [ASK/DownSample FOR A 3ds format ]
+---
+> - [ ] Fix, no working on hover event in mobile platform w/css; 
+> - [ ] Fix start Ugly layout by, when Ready*,(loaded all code*) show objects, Loading page.
 
 
 
@@ -143,7 +171,9 @@ __week 2 & week 3__
 
 __week 4 & week 5__
 ---
-
+> - [x] Better Design for objects - Antonio & Varun(add css classes (BootStrap or other))
+- [x] Tags on JSON file , Keywords for seach 
+- [x] trigger popUP dinamic
 __week 6 & week 7__
 ---
 
