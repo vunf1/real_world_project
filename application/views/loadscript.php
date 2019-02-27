@@ -70,15 +70,15 @@ function shootServerInfo(){
 <!DOCTYPE html>
 <html>
     <head>
-    <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
-     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
 
 
-			        <!- Js -   ->
+		<link rel="stylesheet" href="<?php base_url()?>assets/custom.css">
 <script src="<?php base_url()?>assets/jQuery_331.js">
 	/* jQuery min 3.2.1 slim*/
 </script>
@@ -98,7 +98,6 @@ function shootServerInfo(){
 
 <script type="text/javascript" src="<?php base_url()?>assets/allertify/alertify.js"></script>
 <link rel="stylesheet" href="<?php base_url()?>assets/allertify/css/alertify.css" />
-<script type="text/javascript" src="<?php base_url()?>assets/custom.js"></script>
 
 			        <!- Css   ->
 
@@ -106,7 +105,11 @@ function shootServerInfo(){
 
 <link rel="stylesheet" href="<?php base_url()?>assets/bootstrap4.css" >
 
-<link rel="stylesheet" href="<?php base_url()?>assets/custom.css">
+
+
+
+
+<script type="text/javascript" src="<?php base_url()?>assets/custom.js"></script>
 
 
 

@@ -75,7 +75,7 @@ extract from github
 //Joao MVC architure/security provider by CodeIgniter
 
 
-- [x] server security Architure skeleton, comunication between <br> View(HTML PAGES - from view folder, .php format, with ajax connection- create security) <br> Controller(HomeController, receive post requests from View folder pages anames) <br> Model(Database, function on controller who save data extract from queries or same function extracting same data from files , no-sql ).
+- [x] server security Architure skeleton, comunication between <br> View(HTML PAGES - from view folder, .php format, with ajax connection- create security) <br> Controller(HomeController, receive post requests from View folder pages via ajax) <br> Model(Database, function on controller who save data, extract from queries or same function extracting same data from files , no-sql ).
 
 View->Controller:
 create a new __php file__ and name it(p/on folder View), call it by the controller(HomeController) by Ajax functions using jQuery(javaScript framework) <br>
@@ -89,7 +89,7 @@ View->Controller->Model:
 Controller is waiting for data via POST request, from View, grab that data<br>
 - ask to model a function that retrieve the data needed to fulfil the task;
 - data output php objects/instance, var_dump($data), like console.log or cout ;<br>
-- save data output - $Variable=<br>
+- save data output - $Variable<br>
 
 ---
 
@@ -101,10 +101,11 @@ Controller is waiting for data via POST request, from View, grab that data<br>
 - [ ] Implement Testing - 
 - [ ] server Architure in 'paper' (Dont know if is needed)(MVC).
 
+-
 - [ ] Design popUp content
 
 
-
+- [ ] Improved response from jsonFile key-tags check php function on HomeController
 
 
  syntax, create to fill the __container__ on index, it will change between AJAX connections(load the new HTML, removing(cleanning) the old one )
@@ -112,9 +113,8 @@ Controller is waiting for data via POST request, from View, grab that data<br>
 
 > - [ ] Put responsive to landscape 
 :warning:
-> - [ ] implement framework 'tree' handle 3DS image format [ASK/DownSample FOR A 3ds format ]
+> - [ ] implement framework 'tree' handle 3DS image format [UPLOAD Sample 3ds format - Multimedia ]
 ---
-> - [ ] Fix, no working on hover event in mobile platform w/css; 
 > - [ ] Fix start Ugly layout by, when Ready*,(loaded all code*) show objects, Loading page.
 
 
@@ -156,13 +156,13 @@ Controller is waiting for data via POST request, from View, grab that data<br>
 ### :white_check_mark: DONE :white_check_mark: 
 ###### SPRING SUMMARY
 __week 0 & 1__
-- [x] Know Elements 
-- [x] Project discuss 
-- [x] What should __have__, __must__ and what if __have time__ discuss
+- [x] Know group Elements ;
+- [x] Project discuss ;
+- [x] What should __have__, __must__ and what if __have time__ discuss;
 ---
 
 __week 2 & week 3__
-- [x] Draw a design (mobile portrait & landscape, Kristiana)
+- [x] Draw a design (mobile portrait & landscape, Kristiana);
 
 - [x] Code Architecture HTML/JS/CSS - AJAX async();
 - [x] JSON file - basic structured;
@@ -171,9 +171,10 @@ __week 2 & week 3__
 
 __week 4 & week 5__
 ---
-> - [x] Better Design for objects - Antonio & Varun(add css classes (BootStrap or other))
-- [x] Tags on JSON file , Keywords for seach 
-- [x] trigger popUP dinamic
+- [x] Better Design for objects(add css classes (BootStrap or other))
+- [x] Tags on JSON file , Keywords for seach; 
+- [x] trigger popUP dinamic;
+- [x] Fix, no working on hover event in mobile platform w/css; 
 __week 6 & week 7__
 ---
 

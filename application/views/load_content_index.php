@@ -1,5 +1,5 @@
 
-
+<?php //Joao Search Page ?>
 <?php 
 //code presented for the functionality search building 
 //
@@ -22,13 +22,13 @@
             <div align="center">
                 <ul class="pricing-content list-unstyled">
                     <li>
-                        <input class="form-control" type="text" placeholder="Solution Name" id="solution_name"></input>
+                        <input class="form-control" type="text" placeholder="Search for building/categories" id="solution_name"></input>
                     </li>
                 </ul>
             </div>
             <style type="text/css">
-
-                .left-side {
+    
+                .left-side {//list building divide into 2sides -left30% -right70%
                 margin: 0;
                 float: left;
                 width: 30%;
@@ -39,83 +39,30 @@
                 width: 70%;
 
                 }
-                .split-items .list-group-item.left-side{
+                .split-items, .list-group-item, .left-side{//no borders on left-right side
                     
                 border-top-right-radius:0px;
                 border-bottom-right-radius:0px;
                 }
 
-                .split-items .list-group-item.right-side{
+                .split-items, .list-group-item, .right-side{
+                    //no borders on right + text justify - need to put first child of .right-side without text justify ;
+
                     border:0;
-                    
                     text-align: justify;
-                border-top-left-radius:0px;
-                border-bottom-left-radius:0px;
-                border-bottom-right-radius:0px;
-                border-top-right-radius:4px;
-                }
-                .clearfix:hover{
-                    border:1px solid #7FFAFF;
-                    
+                    border-top-left-radius:0px;
+                    border-bottom-left-radius:0px;
+                    border-bottom-right-radius:0px;
+                    border-top-right-radius:4px;
                 }
 
             </style>
-                <div   id="listContainer">
-                    
 
-
-                <?php
-                    for ($x=0; $x < count($json); $x++) { 
-                            //var_dump($json[$x]);
-                            /*
-                            
-                    */
-                    $buildingName = $json[$x]['name'];
-                    $image = $json[$x]['image-dir'];
-                    $address = $json[$x]['address'];
-                    $description = $json[$x]['description'];
-                    $buildCode = $json[$x]['buildCode'];
-                    //echo $buildingName;
-                    //echo "<li class='list-group-item' style='text-align:left; width:100%; height:20%;'>
-                    //<img src=$image style='width:30%;height:80%;'><a> ".$json[$x]['buildCode']."</a><br>
-                    //".$json[$x]['description']." </li>";
-                    
-                        
-                    //trying to present data in another way
-                    //this div contains 2 divs inside, one small which contains the image and
-                    //another one that contains a table with the information needed
-                    echo "
-                    <div class=' container div_build' id='".$buildCode."' >
-                        <div class='list-group'>
-                        
-                            <div class='clearfix split-items'>
-                                
-                               <img class='list-group-item left-side'style='width:30%;height:25%;' src=$image >
-                                
-                                
-                                <p  class='list-group-item right-side '>$buildingName</p>
-                                
-                                <p  class='list-group-item right-side '>$description</p>
-                                
-
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    ";
-                        
-                    }
-
-                ?>
-                </div><!--List Container -->
-        </div>
-    </div>
-</div>
-<script type="text/javascript" src="<?php base_url()?>assets/custom.js"></script>
 <script >
 
 $('#solution_name').on('keyup keypress', function(e) {
-    //Block key Event ENTER onid solution_name //SEARCH.BAR
+    //Block key Event ENTER onid solution_name 
+    //SEARCH.BAR
     var keyCode = e.keyCode || e.which;
     if (keyCode === 13) { 
       e.preventDefault();
@@ -123,7 +70,11 @@ $('#solution_name').on('keyup keypress', function(e) {
     }
   });
   
+  $( document ).ready(function(){
 
+
+  });
+  
 $('#solution_name').keyup(function(){//Joao
   //var search = "HUB"
   var search = $(this).val();
@@ -190,7 +141,7 @@ $('#solution_name').keyup(function(){//Joao
 
 
         var list = $('<div class=" container div_build" id="'+buildCode+'" ></div>');
-            head=("<div class='clearfix split-items'><img class='list-group-item left-side'style='width:30%;height:25%;' src='"+image+"' ><p  class='list-group-item right-side '>"+buildingName+"</p><p  class='list-group-item right-side '>"+description+"</p></div><br>");
+            head=("<div class='clearfix split-items border border-primary'><img class='list-group-item left-side'style='width:30%;height:25%;' src='"+image+"' ><p  class='list-group-item right-side '>"+buildingName+"</p><p  class='list-group-item right-side '>"+description+"</p></div><br>");
 
             
             
@@ -200,22 +151,25 @@ $('#solution_name').keyup(function(){//Joao
     
     });
  };
- function modelTrigger(){
+ function modelTrigger(data){
+    console.log(data['image-dir']);
     var closable = alertify.alert().setting('closable');
     //grab the dialog instance using its parameter-less constructor then set multiple settings at once.
     alertify.alert()
       .setting({
-        'title':'Done',
+        'title':data['name'],
         'label':'Done',
-        'message': '<div class="container"><img src="dummy.png"><a>Ola</a></div>' ,
-        'onok': function(){ alertify.success('Great');}
+        'message': '<div class="container"><img src='+data["image-dir"]+' ><a>Ola</a></div>' ,
+        'onok': function(){ 
+            /* can be use to move data into input box when success on button click */
+            alertify.success('checked');}
       }).show();
 };
  function delevopPopupDinamic(mydata){
     
     $.each(mydata,function(index, data) {
         $(document).on('click', '#'+data['buildCode'] , function(){
-            modelTrigger();
+            modelTrigger(data);
         });
 
     }); 
@@ -225,4 +179,60 @@ $('#solution_name').keyup(function(){//Joao
 
  
 </script>
+
+
+
+
+
+
+                <div   id="listContainer">
+                    
+                <?php
+                    for ($x=0; $x < count($json); $x++) { 
+                            //var_dump($json[$x]);
+                            /*
+                            
+                    */
+                    $buildingName = $json[$x]['name'];
+                    $image = $json[$x]['image-dir'];
+                    $address = $json[$x]['address'];
+                    $description = $json[$x]['description'];
+                    $buildCode = $json[$x]['buildCode'];
+                    //echo $buildingName;
+                    //echo "<li class='list-group-item' style='text-align:left; width:100%; height:20%;'>
+                    //<img src=$image style='width:30%;height:80%;'><a> ".$json[$x]['buildCode']."</a><br>
+                    //".$json[$x]['description']." </li>";
+                    
+                        
+                    //trying to present data in another way
+                    //this div contains 2 divs inside, one small which contains the image and
+                    //another one that contains a table with the information needed
+                    echo "
+                    <div class=' container div_build' id='".$buildCode."' >
+                        <div class='list-group list-borderless'>
+                        
+                            <div class='clearfix split-items'>
+                                
+                               <img class='list-group-item left-side'style='width:30%;height:25%;' src=$image >
+                                
+                                
+                                <p  class='list-group-item right-side '>$buildingName</p>
+                                
+                                <p  class='list-group-item right-side '>$description</p>
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    ";
+                        
+                    }
+
+                ?>
+                </div><!--List Container -->
+        </div>
+    </div>
+</div>
+
 <link rel="stylesheet" href="<?php base_url()?>assets/custom.css">

@@ -7,7 +7,7 @@ class Homecontroller extends CI_Controller {
 	 * Index controller.
 	 */
 
-    function __construct() {
+    function __construct(){
         parent::__construct();
         $this->output->set_header('Access-Control-Allow-Origin: *');
         
@@ -23,8 +23,7 @@ class Homecontroller extends CI_Controller {
 
 
 
-	public function index()
-	{
+	public function index(){
 		
 		$this->load->view('welcome_message');
 		$this->load->view('loadscript');//if put frist create a bug
@@ -33,8 +32,7 @@ class Homecontroller extends CI_Controller {
 
 	}
 
-	public function index_content()
-	{
+	public function index_content(){
 		
 		//var_dump($this->agent->is_mobile());
 		//var_dump($this->agent->is_browser());
@@ -45,17 +43,43 @@ class Homecontroller extends CI_Controller {
 		//$this->load->view('load_content_index',$result);
 	}
     
-    
-	public function index_contentNavCam()
-	{
-		
+   
+	public function index_contentNavCam(){
+	 /*
+	 * 
+	 * 
+		*json inside result will be a variable declared 'json' on the view to be handle/manipulated.
+	 */	
 		
 		$result['json']=$this->datafunction->get_jsonfile_data();
-		//json inside result will be a variable declared json on the view to be handle.
 		$this->load->view('navigateCampus',$result);
 
 
 	}
+
+	public function index_loadScanPage(){
+	 /*
+	 * 
+	 * 
+		*json inside result['json'] will be a variable declared 'json' on the view to be handle/manipulated.
+
+		*to access the variable only need to open a php cube on the html/js code <?php <loop for $json> ?>
+
+		*Code snippets on view page(application/view/load_content_index.php)
+	 */	
+
+		
+		$result['json']=$this->datafunction->get_jsonfile_data();
+		
+		$this->load->view('qr-Code',$result);
+		
+		
+
+
+	}
+
+
+
 
     //function called to connect with the model to send the data inserted in the buildings search bar
     public function searchBuildings() {

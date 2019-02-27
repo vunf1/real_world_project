@@ -3,9 +3,13 @@
 */
 
 /*change proporties from element*/
+body{
+	display: none;
+}
+
 ul {
   		list-style-type: none;
-	}
+}
 
 /*change properties from classes*/
 .nav-link,.navbar-item{
@@ -24,4 +28,13 @@ ul {
 #search-op, #nav-op, #scan-op{
 	color:white;
 	word-wrap: break-word;
+}
+
+.clearfix:hover{
+	border:1px solid #7FFAFF;
+	
+}
+.list-group{
+	border-left: 0;
+	border-right: 0;
 }
