@@ -77,7 +77,7 @@ function shootServerInfo(){
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
 
-
+		<script src="<?php base_url()?>assets/three/Three.js"></script>
 		<link rel="stylesheet" href="<?php base_url()?>assets/custom.css">
 <script src="<?php base_url()?>assets/jQuery_331.js">
 	/* jQuery min 3.2.1 slim*/

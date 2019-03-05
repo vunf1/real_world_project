@@ -25,6 +25,7 @@ class Homecontroller extends CI_Controller {
 
 	public function index(){
 		
+		
 		$this->load->view('welcome_message');
 		$this->load->view('loadscript');//if put frist create a bug
 

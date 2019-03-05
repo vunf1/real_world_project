@@ -1,5 +1,6 @@
 /*
 	Basic CSS syntax
+	Working/Loaded
 */
 
 /*change proporties from element*/
@@ -17,6 +18,9 @@ ul {
 	word-wrap: break-word; 
 	font-size: 13px;
 }
+#nav-bar-full-width {  
+	
+}
 
 /*change properties from id*/
 #nav-bar-full-width{
@@ -26,6 +30,7 @@ ul {
 }
 /* multi changes from id*/
 #search-op, #nav-op, #scan-op{
+	
 	color:white;
 	word-wrap: break-word;
 }
