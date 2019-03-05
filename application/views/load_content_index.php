@@ -86,7 +86,7 @@ $('#solution_name').keyup(function(){//Joao
             url:base_url()+"index.php/Homecontroller/searchBuildings",
             method:"POST",
             dataType:'text',
-            data:{'searchTxT':search},
+            data:{'searchTxT':search}, //sends the content of the variabl search by post method names as searchTxT
             success:function(data){
                 //console.log($.parseJSON(data));
                 //$("#listContainer").html(""); // clear the div where the id = listContainer 
@@ -107,6 +107,9 @@ $('#solution_name').keyup(function(){//Joao
                 //alert('Search Error: '+ xhr.status+ ' - '+ error); 
             }
         });
+  }
+  else{
+      
   }
   <?php
   /**Create List again when search is empty, 

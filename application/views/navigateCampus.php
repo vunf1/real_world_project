@@ -28,7 +28,10 @@ for ($x=0; $x < count($json); $x++) {
 }
 
  ?>
-<script type="text/javascript" src="<?php base_url()?>assets/custom.js"></script>
+<script type="text/javascript" src="<?php base_url()?>assets/custom.js">
+//function to populate the from an to text boxes  
+
+</script>
 <div class="container-fluid" id="main_navigate">
 	<div class="row">
 		<div class="col-md-12">
@@ -38,11 +41,11 @@ for ($x=0; $x < count($json); $x++) {
 			<form role="form">
 				<div class="form-group">
 					 
-					<input type="text" class="form-control" id="firstBuilding" placeholder="From"  />
+					<input type="text" class="form-control" id="firstBuilding" value="" placeholder="From"  />
 				</div>
 				<div class="form-group">
 					 
-					<input type="text" class="form-control" id="secondBuilding" placeholder="To"/>
+					<input type="text" class="form-control" id="secondBuilding" value="" placeholder="To"/>
 				</div> 
 				<button type="button" class="btn btn-primary" id="validateSearch">
 					Search
@@ -51,6 +54,7 @@ for ($x=0; $x < count($json); $x++) {
 		</div>
 	</div>
 </div>
+<hr> 
 
 <script >
 
@@ -81,7 +85,6 @@ $('#firstBuilding').keyup(function(){
                 console.log(data);  //print in the console (only for debugg
                 //$("#listContainer").html("");
                 alertSuccess("Found"); // message to the user 
-                call3dmodel();
             },error:function(xhr, status, error){
                 //if the search does not match
                 alertError("Not Found");
@@ -121,13 +124,46 @@ $('#validateSearch').on('click', function(){ //antonio
     var fromInput = $('#firstBuilding').val(); //put the tu contents of the search boxes into the variables
     var toInput = $('#searchBuildings').val();
     
-    if (fromInput != '' || toInput != ''){
+    if (fromInput != '' && toInput != ''){
         console.log(fromInput); //print to the console
         console.log(toInput);// print to the console
         //$("#main_navigate").html(""); clear the div main_navigate 
-        console.log("the search was validate, load the route")
+        console.log("the search was validate, load the route");
+        $("#suggestions").html(""); //cleans all the data from the suggestions div
+        $('#suggestions').append('hello, load the 3d model');   
     }
     
-});                   
-                          
+});     
+$('#suggestionfrom').on('click',function(){
+    var valuetofill = $('#suggestionfrom').val(); //get the value into th variable
+    $("#suggestions").append(valuetofill);
+    $('#firstBuilding').val(valuetofill);
+});                       
 </script>
+<div id="suggestions">
+    <?php 
+        for($x=0; $x < count($json); $x++){
+            $buildingName = $json[$x]['name'];
+            $image = $json[$x]['image-dir'];
+            $address = $json[$x]['description'];
+            $buildCode = $json[$x]['buildCode'];
+            echo"
+            <div class='row'>
+                <div class='col-md-8'>
+                $buildingName
+                </div>
+                <div class='col-md-4'>
+                        <button id='suggestionfrom' class='btn active btn-sm btn-outline-info' value=$buildCode>
+                            Set as origin
+                        </button> 
+                        <br>
+                        <button type='button' id='suggestionto' class='btn active btn-sm btn-outline-info'>
+                            Set as destination 
+                        </button>
+                    </div>
+                </div>
+            <br>
+            ";
+        }
+    ?>
+</div>

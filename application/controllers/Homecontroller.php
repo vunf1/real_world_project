@@ -95,7 +95,6 @@ class Homecontroller extends CI_Controller {
 		for ($x=0; $x < count($data); $x++) {
 			if($data[$x]['tags']){
 				//var_dump( $data[$x]['tags'][0],"OK");
-				
 				for ($y=0; $y < count($data[$x]['tags']); $y++) {
 					
 					if($data[$x]['tags'][$y]==strtoupper($search)){
@@ -103,7 +102,6 @@ class Homecontroller extends CI_Controller {
 						array_push($endSearchData,$data[$x]);
 						$counte=$counte+1;
 						//echo json_encode($data[$x]);
-						
 					};
 					
 				}
