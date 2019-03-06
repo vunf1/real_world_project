@@ -4,27 +4,27 @@
     "buildCode": "ECB",
     "name":"Engineering & Computing Building",
     "description": "Built in 2012 and already toped-up with the lattest technologies like UK's largest magnet solely used by Faculty of Engineering",
-    "faciliites":["Computing","Starbucks","Flight Simulators"],
+    "facilities":["Computing","Starbucks","Flight Simulators"],
     "address": "CV1 2JH",
-    "tags": ["1","Starbucks","Flight Simulators","12"],
+    "tags": ["all","Starbucks","Flight Simulators","computing"],
     "image-dir": "dummy.png"
    },
   {
     "buildCode": "HUB",
     "name": "TheHub",
     "description": "Completed in 2011 TheHub is a welcomming social space for student and also provide services like doctors' surgery and faith center",
-    "faciliites": ["Doctors' surgery","Faith Center","Hairdresser","Costa Coffe","Students' Union"],
+    "facilities": ["Doctors' Surgery","Faith Center","Hairdresser","Costa Coffe","Students' Union"],
     "address":"CV1 5FB",
-    "tags": ["1","Starbucks","Flight Simulators"],
+    "tags": ["all","Starbucks","Flight Simulators","entertainment"],
     "image-dir": "dummy.png"
    },
   {
     "buildCode": "WM",
     "name":"William Morris",
     "description": "Used in 1910 as the factory of the Morris car company for the engine production ",
-    "faciliites":["Business","Law"],
+    "facilities":["Business","Law"],
     "address": "CV1 5DL",
-    "tags": ["1","Starbucks","Flight Simulators","132"],
+    "tags": ["all","Starbucks","Flight Simulators","132"],
     "image-dir": "dummy.png"
    }
   ]

@@ -6,6 +6,7 @@
 /*change proporties from element*/
 body{
 	display: none;
+	margin: 0;
 }
 
 ul {
@@ -18,15 +19,20 @@ ul {
 	word-wrap: break-word; 
 	font-size: 13px;
 }
-#nav-bar-full-width {  
-	
-}
-
 /*change properties from id*/
 #nav-bar-full-width{
+	
+	z-index: 1;
+	top:0;
+	position: fixed;
 	word-wrap: break-word;
 	background-color: cornflowerblue;
+	width: 100%;
+	height: 25%;
 
+}
+#container{
+	padding-top: 40%;
 }
 /* multi changes from id*/
 #search-op, #nav-op, #scan-op{
@@ -43,3 +49,49 @@ ul {
 	border-left: 0;
 	border-right: 0;
 }
+
+/**
+*
+*  CSS for Dinamic list created content in load_content_index
+*
+* */
+
+    
+.left-side {
+	/*list building divide into 2sides -left30% -right70%*/
+	margin: 0;
+	float: left;
+	width: 30%;
+	}
+.right-side {
+	margin: 0;
+	float: left;
+	width: 70%;
+	font-size: 80%;
+
+	}
+	.right-side2 {
+		margin: 0;
+		float: left;
+		width: 100%;
+		font-size: 80%;
+	
+		}
+.split-items, .list-group-item, .left-side{//no borders on left-right side
+		
+	border-top-right-radius:0px;
+	border-bottom-right-radius:0px;
+	}
+
+.split-items, .list-group-item, .right-side{
+		//no borders on right + text justify - need to put first child of .right-side without text justify ;
+
+		border:0;
+		text-align: left;
+		border-top-left-radius:0px;
+		border-bottom-left-radius:0px;
+		border-bottom-right-radius:0px;
+		border-top-right-radius:4px;
+	}
+
+	/** ---END--- */

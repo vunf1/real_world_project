@@ -80,46 +80,25 @@ class Homecontroller extends CI_Controller {
 	}
 
 
+	
 
-
-    //function called to connect with the model to send the data inserted in the buildings search bar
+	/**
+	 * function called to send building(s) data from JsonFile to View
+	 *
+	 * @return JSON
+	 */
     public function searchBuildings() {
 		//At moment is looking for the BuildCode on the file, searching bar need to be the Code
 		
 		
 		//Multi 'Build' Data SEND
 		$search=$this->input->post('searchTxT');//POST variable sended
+		$data=$this->datafunction->get_Selected_data($search);
+		echo $data;
 		
-		$data=$this->datafunction->get_jsonfile_data();//Model call
-		$endSearchData=array();
-		$counte=0;
-		for ($x=0; $x < count($data); $x++) {
-			if($data[$x]['tags']){
-				//var_dump( $data[$x]['tags'][0],"OK");
-				for ($y=0; $y < count($data[$x]['tags']); $y++) {
-					
-					if($data[$x]['tags'][$y]==strtoupper($search)){
-						//var_dump( json_encode($data[$x]));
-						array_push($endSearchData,$data[$x]);
-						$counte=$counte+1;
-						//echo json_encode($data[$x]);
-					};
-					
-				}
-
-			}
-			
-		}
-		if($counte>=1){
-			
-			
-			echo json_encode($endSearchData);
-			$counte=0;
-
-		};
 
 	}
-	
+
 
 }
 
