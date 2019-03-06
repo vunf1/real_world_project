@@ -136,9 +136,14 @@ $('#validateSearch').on('click', function(){ //antonio
 });     
 $('#suggestionfrom').on('click',function(){
     var valuetofill = $('#suggestionfrom').val(); //get the value into th variable
-    $("#suggestions").append(valuetofill);
+    //$("#suggestions").append(valuetofill);
     $('#firstBuilding').val(valuetofill);
-});                       
+});  
+$('#suggestionto').on('click',function(){
+   var valuetofill2 = $('#suggestionto').val(); //get the building code that is in the variable
+   $('#secondBuilding').val(valuetofill2); // populate the field where the id is #secondBuilding with the previous variable
+    
+});
 </script>
 <div id="suggestions">
     <?php 
@@ -151,13 +156,14 @@ $('#suggestionfrom').on('click',function(){
             <div class='row'>
                 <div class='col-md-8'>
                 $buildingName
+                $buildCode
                 </div>
                 <div class='col-md-4'>
-                        <button id='suggestionfrom' class='btn active btn-sm btn-outline-info' value=$buildCode>
+                        <button type='button' id='suggestionfrom' class='btn active btn-sm btn-outline-info' value=$buildCode>
                             Set as origin
                         </button> 
                         <br>
-                        <button type='button' id='suggestionto' class='btn active btn-sm btn-outline-info'>
+                        <button type='button' id='suggestionto' class='btn active btn-sm btn-outline-info' value=$buildCode>
                             Set as destination 
                         </button>
                     </div>
