@@ -3,12 +3,12 @@ University Navigation - Version Control
 
 # Server / Debug :
 ###### Android
-- SERVER APK [link]()
-- LOCALHOST - Live Debug (UPLOADING)
+> - SERVER APK [link](https://github.coventry.ac.uk/deoiveij/real_world_project/raw/master/RWP_releaseVersion.apk)
+> - LOCALHOST - Live Debug (UPLOADING)
 
 ###### IOS
-- SERVER APK (SOON)
-- LOCALHOST - Live Debug APK (SOON)
+> - SERVER APK (SOON)
+> - LOCALHOST - Live Debug APK (SOON)
 
 ---
 # Help Docs:
@@ -82,7 +82,8 @@ extract from github
 
 
 ###### Brief about Algorithmn
-//Joao MVC architure/security provider by CodeIgniter
+ 
+MVC architure/security provider by CodeIgniter
 
 
 - server security Architure skeleton, comunication between <br> View(HTML PAGES - from view folder, .php format, with ajax connection- create security) <br> Controller(HomeController, receive post requests from View folder pages via ajax) <br> Model(Database, function on controller who save data, extract from queries or same function extracting same data from files , no-sql ).
@@ -180,14 +181,14 @@ __week 6 & week 7__
 ---
 
 - [x] Draw a sample 3D Building [EEC, HUB, WILLIAM] - Edward / Beth / Kristiana
-> - [x] Improvement of code architecture
+- [x] Improvement of code architecture
 
-> - [x] Fix start Ugly layout by, when Ready*,(loaded all code*) show objects, Loading page.
+- [x] Fix start Ugly layout by, when Ready*,(loaded all code*) show objects, Loading page.
 
-> - [x] JavaScript / PHP Docs
-> - [x] Server Android APK - Updated to minimum support android 6.0 
-> - [x] Live Debug Android APK - Creation - localhost
-> - [x] List of building design complete
+- [x] JavaScript / PHP Docs
+- [x] Server Android APK - Updated to minimum support android 6.0 
+- [x] Live Debug Android APK - Creation - localhost
+- [x] List of building design complete
  
 __week 8 & week 9__
 ---
