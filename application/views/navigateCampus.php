@@ -28,9 +28,37 @@ for ($x=0; $x < count($json); $x++) {
 }
 
  ?>
-<script type="text/javascript" src="<?php base_url()?>assets/custom.js">
-//function to populate the from an to text boxes  
+<style>
+    body { margin: 0; }
+    canvas { width: 100%; height: 100% }
+</style>
+<script type="text/javascript" src="<?php base_url()?>assets/custom.js"></script>
+<script src="<?php base_url()?>/assets/three.js"></script>
+<script>
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
+    var renderer = new THREE.WebGLRenderer();
+    renderer.setSize( window.innerWidth, window.innerHeight );
+    document.body.appendChild( renderer.domElement );
+    
+    //creating an object to present
+    var geometry = new THREE.BoxGeometry( 1, 1, 1 );  //build a geometry 
+    var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } ); //set the texture
+    var cube = new THREE.Mesh( geometry, material ); //put the geometry and the texture together
+    scene.add( cube ); //load the obejct
+
+    camera.position.z = 5
+    
+    function animate() {  //loop to force the render to draw the object
+        requestAnimationFrame( animate );
+        cube.rotation.x += 0.01;
+        cube.rotation.y += 0.01;
+        renderer.render( scene, camera );
+    }
+    //document.getElementById("validateSearch").onclick = function() {
+    animate();
+    //};
 </script>
 <div class="container-fluid" id="main_navigate">
 	<div class="row">
@@ -70,7 +98,7 @@ $('#firstBuilding').on('keyup keypress', function(e) {
   });
 
 //antonio
-$('#firstBuilding').keyup(function(){
+$('#firstBuilding').keyup(function(){ //antonio roque
     //grab the content of 'from' seach box
     var from = $(this).val();  //set the content of the search bar to a variable
     if(from != ''){
@@ -94,7 +122,7 @@ $('#firstBuilding').keyup(function(){
     
 });
 //antonio
-$('#secondBuilding').keyup(function(){ //antonio
+$('#secondBuilding').keyup(function(){ //antonio roque
     //get the content of the text field to a variable
     var to = $(this).val();
     if(to !=''){
@@ -117,8 +145,8 @@ $('#secondBuilding').keyup(function(){ //antonio
     
 });
 
-function call3dmodel(){  //antonio
-    console.log("call the 3d model")
+function call3dmodel(){  //antonio roque
+    animate();
 }
 $('#validateSearch').on('click', function(){ //antonio
     var fromInput = $('#firstBuilding').val(); //put the tu contents of the search boxes into the variables
@@ -131,19 +159,25 @@ $('#validateSearch').on('click', function(){ //antonio
         console.log("the search was validate, load the route");
         $("#suggestions").html(""); //cleans all the data from the suggestions div
         $('#suggestions').append('hello, load the 3d model');   
+        call3dmodel()
+    }
+    else{
+        alertError ("Search is not possible");
     }
     
 });     
-$('#suggestionfrom').on('click',function(){
-    var valuetofill = $('#suggestionfrom').val(); //get the value into th variable
+$('.suggestionfrom').on('click',function(){
+    var valuetofill = $('.suggestionfrom').val(); //get the value into th variable
     //$("#suggestions").append(valuetofill);
     $('#firstBuilding').val(valuetofill);
 });  
-$('#suggestionto').on('click',function(){
-   var valuetofill2 = $('#suggestionto').val(); //get the building code that is in the variable
+$('.suggestionto').on('click',function(){
+   var valuetofill2 = $('.suggestionto').val(); //get the building code that is in the variable
    $('#secondBuilding').val(valuetofill2); // populate the field where the id is #secondBuilding with the previous variable
     
 });
+    
+
 </script>
 <div id="suggestions">
     <?php 
@@ -157,13 +191,14 @@ $('#suggestionto').on('click',function(){
                 <div class='col-md-8'>
                 $buildingName
                 $buildCode
+                $x
                 </div>
                 <div class='col-md-4'>
-                        <button type='button' id='suggestionfrom' class='btn active btn-sm btn-outline-info' value=$buildCode>
+                        <button type='button' class='btn active btn-sm btn-outline-info suggestionfrom' value='$buildCode'>
                             Set as origin
                         </button> 
                         <br>
-                        <button type='button' id='suggestionto' class='btn active btn-sm btn-outline-info' value=$buildCode>
+                        <button type='button' class='btn active btn-sm btn-outline-info suggestionto' value='$buildCode'>
                             Set as destination 
                         </button>
                     </div>
