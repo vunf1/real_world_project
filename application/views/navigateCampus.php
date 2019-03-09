@@ -33,7 +33,7 @@ for ($x=0; $x < count($json); $x++) {
     canvas { width: 100%; height: 100% }
 </style>
 <script type="text/javascript" src="<?php base_url()?>assets/custom.js"></script>
-<script src="<?php base_url()?>/assets/three.js"></script>
+<script type="text/javascript "src="<?php base_url()?>assets/three.js"></script>
 <script>
     var scene = new THREE.Scene();
     var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -56,9 +56,6 @@ for ($x=0; $x < count($json); $x++) {
         cube.rotation.y += 0.01;
         renderer.render( scene, camera );
     }
-    //document.getElementById("validateSearch").onclick = function() {
-    animate();
-    //};
 </script>
 <div class="container-fluid" id="main_navigate">
 	<div class="row">
