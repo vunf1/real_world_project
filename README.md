@@ -109,7 +109,6 @@ View->Controller->Model:
 
 > - [ ] Check/Fix responsive to landscape 
 :warning:
-> - [ ] implement framework 'tree' handle 3DS image format [UPLOAD Sample 3ds format - Multimedia ]
 
 - [ ] Implement Testing - 
 ---
@@ -192,6 +191,10 @@ __week 6 & week 7__
  
 __week 8 & week 9__
 ---
+
+> - [x] implement User Agents - mobile - browser
+> - [x] implement Desktop layout
+> - [x] implement framework 'three' handle 3D image format(GLTF) [UPLOAD Sample 3ds format - Multimedia ]
 
 
 __week 10__
