@@ -41,6 +41,11 @@ $( document ).ready(function(){
                 
                 $("#listContainer").html("");
                 buildSearchList($.parseJSON(data),"listContainer");
+
+                trigger3D($.parseJSON(data));
+  
+                //console.log($("#DHUB"));
+                
                 
 
             },error: function(xhr, status, error){ 
@@ -51,6 +56,15 @@ $( document ).ready(function(){
         
 
 });
+function trigger3D(data){
+    $.each(data,function(index, dats) {
+
+        let treeD = new TD_class(dats['buildCode'].toString(),"D"+dats['buildCode'].toString());
+        treeD.init();
+
+    });
+
+}
   
 $('#solution_name').keyup(function(e){//Joao
 

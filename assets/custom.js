@@ -187,12 +187,11 @@ function  alertWarning(data) {//Joao
 
        var list = $('<br><div class=" container div_build list-group-flush" id="'+buildCode+'" ></div>');
        
-           head=("<div class='clearfix split-items '><img class=' left-side' src='"+image+"' ><p  class=' right-side '>"+buildingName+" </p><p  class=' right-side '>Code:"+buildCode+" </p><p  class=' right-side '>Facilities:"+data['facilities'][0]+","+data['facilities'][1]+", . . . </p><small>Click for more information</small><p  class=' right-side2 '><a>Description:</a>"+description+"</p></div><br>");
+           head=("<div class='clearfix split-items '><div class=' left-side' id='D"+data['buildCode']+"' >OMG</div><p  class=' right-side '>"+buildingName+" </p><p  class=' right-side '>Code: "+buildCode+" </p><p  class=' right-side '>Facilities: "+data['facilities'][0]+","+data['facilities'][1]+", . . . </p><small>Click for more information</small><p  class=' right-side2 '><a>Description:</a>"+description+"</p></div><br>");
 
         $(head).appendTo(list);
-           
-        return ($(list).appendTo("#"+appendToElementID));
-   
+        $(list).appendTo("#"+appendToElementID);
+        
    });
 };
 
@@ -230,6 +229,7 @@ function modelTrigger(data){//Joao
          * When key is pressed trigger event
          *
          */
+        message:'<div id="D'+data['buildCode']+'"></div>',
         'onok': function(){ 
             
             alertify.success(data['name']+' Checked');}

@@ -22421,7 +22421,7 @@
 		this.getStandingMatrix = function () {
 
 			console.warn( 'THREE.WebXRManager: getStandingMatrix() is no longer needed.' );
-			return new Matrix4();
+			return new THREE.Matrix4();
 
 		};
 
@@ -40190,7 +40190,8 @@
 
 			for ( var i = 0; i < 6; i ++ ) {
 
-				renderer.setRenderTarget( renderTarget, i );
+				renderTarget.activeCubeFace = i;
+				renderer.setRenderTarget( renderTarget );
 
 				renderer.clear( color, depth, stencil );
 

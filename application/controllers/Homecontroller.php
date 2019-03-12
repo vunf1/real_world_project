@@ -16,7 +16,7 @@ class Homecontroller extends CI_Controller {
 		
 		$this->load->library('form_validation');
 	    //autoload.config -$this->load->library('unit_test');
-		//autoload.config -$this->load->library('user_agent');//Check if is mobile or desktop interface, can give a lot of information, check docs for more information;
+		$this->load->library('user_agent');//Check if is mobile or desktop interface, can give a lot of information, check docs for more information;
        	$this->load->model('datafunction');
     }
 
@@ -25,9 +25,26 @@ class Homecontroller extends CI_Controller {
 
 	public function index(){
 		
-		
-		$this->load->view('welcome_message');
-		$this->load->view('loadscript');//if put frist create a bug
+		if ($this->agent->is_mobile('iphone')){
+
+			$this->load->view('welcome_message');
+			$this->load->view('loadscript');
+
+		}elseif ($this->agent->is_mobile()){
+
+			$this->load->view('welcome_message');
+			$this->load->view('loadscript');
+
+		}else{
+
+		$this->load->view('loadscript');
+		$this->load->view('welcome_message_desk');
+
+		}
+
+
+
+		//$this->load->view('loadscript');//if put frist create a bug
 
 
 
