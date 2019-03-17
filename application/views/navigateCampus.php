@@ -33,29 +33,29 @@ for ($x=0; $x < count($json); $x++) {
     canvas { width: 100%; height: 100% }
 </style>
 <script type="text/javascript" src="<?php base_url()?>assets/custom.js"></script>
-<script type="text/javascript "src="<?php base_url()?>assets/three.js"></script>
+<!--<script type="text/javascript "src="<?php base_url()?>assets/TD_class.js"></script>-->
 <script>
-    var scene = new THREE.Scene();
-    var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+    //var scene = new THREE.Scene();
+    //var camera = new THREE.PerspectiveCamera( 90, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
-    var renderer = new THREE.WebGLRenderer();
-    renderer.setSize( window.innerWidth, window.innerHeight );
-    document.body.appendChild( renderer.domElement );
+    //var renderer = new THREE.WebGLRenderer();
+    //renderer.setSize( window.innerWidth, window.innerHeight );
+    //document.body.appendChild( renderer.domElement );
     
     //creating an object to present
-    var geometry = new THREE.BoxGeometry( 1, 1, 1 );  //build a geometry 
-    var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } ); //set the texture
-    var cube = new THREE.Mesh( geometry, material ); //put the geometry and the texture together
-    scene.add( cube ); //load the obejct
+    //var geometry = new THREE.BoxGeometry( 1, 1, 1 );  //build a geometry 
+    //var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } ); //set the texture
+    //var cube = new THREE.Mesh( geometry, material ); //put the geometry and the texture together
+    //scene.add( cube ); //load the obejct
 
-    camera.position.z = 5
+    //camera.position.z = 5
     
-    function animate() {  //loop to force the render to draw the object
-        requestAnimationFrame( animate );
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
-        renderer.render( scene, camera );
-    }
+    //function animate() {  //loop to force the render to draw the object
+    //    requestAnimationFrame( animate );
+    //    cube.rotation.x += 0.01;
+    //    cube.rotation.y += 0.01;
+    //    renderer.render( scene, camera );
+    //}
 </script>
 <div class="container-fluid" id="main_navigate">
 	<div class="row">
@@ -64,14 +64,30 @@ for ($x=0; $x < count($json); $x++) {
 				Navigate Campus
 			</h3>
 			<form role="form">
-				<div class="form-group">
-					 
-					<input type="text" class="form-control" id="firstBuilding" value="" placeholder="From"  />
+				<div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01" >Origin</label>
+                    </div>
+					<!--<input type="text" class="form-control" id="firstBuilding" value="" placeholder="From"  />-->
+                    <select class="custom-select firstBuilding" id="inputGroupSelect01">
+                        <option > Choose....</option>
+                        <option value"ECB">ECB</option>
+                        <option value"WM">WM</option>
+                        <option value"HUB">HUB</option>
+                    </select>
 				</div>
-				<div class="form-group">
-					 
-					<input type="text" class="form-control" id="secondBuilding" value="" placeholder="To"/>
-				</div> 
+                
+                <div class ="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect02" >Destin</label>
+                    </div>
+                    <select class="custom-select secondBuilding" id="inputGroupSelect02 ">
+                        <option >Choose...</option>
+                        <option value"ECB">ECB</option>
+                        <option value"WM">WM</option>
+                        <option value"HUB">HUB</option>
+                    </select>
+                </div> 
 				<button type="button" class="btn btn-primary" id="validateSearch">
 					Search
 				</button>
@@ -95,7 +111,7 @@ $('#firstBuilding').on('keyup keypress', function(e) {
   });
 
 //antonio
-$('#firstBuilding').keyup(function(){ //antonio roque
+/*$('#firstBuilding').keyup(function(){ //antonio roque
     //grab the content of 'from' seach box
     var from = $(this).val();  //set the content of the search bar to a variable
     if(from != ''){
@@ -118,8 +134,9 @@ $('#firstBuilding').keyup(function(){ //antonio roque
     }
     
 });
+*/
 //antonio
-$('#secondBuilding').keyup(function(){ //antonio roque
+/*$('#secondBuilding').keyup(function(){ //antonio roque
     //get the content of the text field to a variable
     var to = $(this).val();
     if(to !=''){
@@ -141,22 +158,25 @@ $('#secondBuilding').keyup(function(){ //antonio roque
     }
     
 });
-
-function call3dmodel(){  //antonio roque
-    animate();
+*/
+function call3dmodel(buildingCode, elementId){  //antonio roque
+    model = new TD_class(buildingCode, elementId);
+    return model
 }
-$('#validateSearch').on('click', function(){ //antonio
-    var fromInput = $('#firstBuilding').val(); //put the tu contents of the search boxes into the variables
-    var toInput = $('#searchBuildings').val();
-    
+$('#validateSearch').on('click', function(){ //antonio roque
+    var fromInput = $('.firstBuilding').val(); //put the tu contents of the dropdowns into the variables
+    var toInput = $('.secondBuilding').val();
+    console.log(fromInput);
+    console.log(toInput);
     if (fromInput != '' && toInput != ''){
         console.log(fromInput); //print to the console
         console.log(toInput);// print to the console
         //$("#main_navigate").html(""); clear the div main_navigate 
         console.log("the search was validate, load the route");
         $("#suggestions").html(""); //cleans all the data from the suggestions div
-        $('#suggestions').append('hello, load the 3d model');   
-        call3dmodel()
+        $('#suggestions').append('hello, load the 3d model');
+        $('#suggestions').append(fromInput);
+        $('#suggestions').append(call3dmodel(fromInput, 'suggestions'));
     }
     else{
         alertError ("Search is not possible");
