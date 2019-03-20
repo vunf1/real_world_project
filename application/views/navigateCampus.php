@@ -161,13 +161,11 @@ $('#firstBuilding').on('keyup keypress', function(e) {
 */
 function call3dmodel(buildingCode, elementId){  //antonio roque
     model = new TD_class(buildingCode, elementId);
-    return model
+    model.init();
 }
 $('#validateSearch').on('click', function(){ //antonio roque
     var fromInput = $('.firstBuilding').val(); //put the tu contents of the dropdowns into the variables
     var toInput = $('.secondBuilding').val();
-    console.log(fromInput);
-    console.log(toInput);
     if (fromInput != '' && toInput != ''){
         console.log(fromInput); //print to the console
         console.log(toInput);// print to the console
