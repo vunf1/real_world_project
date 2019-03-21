@@ -15,7 +15,7 @@ University Navigation - Version Control
 Codeigniter: https://www.codeigniter.com/user_guide/index.html (Installed)<br>
 Bootstrap: https://getbootstrap.com/docs/4.0/layout/grid/ (Installed)<br>
 jQuery: https://api.jquery.com/ (Installed)<br>
-Allertify: https://alertifyjs.com/examples.html (Not Installed)<br>
+Allertify: https://alertifyjs.com/examples.html (Installed)<br>
 
 
 ###### My Workflow remotely(Linux):
@@ -102,7 +102,6 @@ View->Controller->Model:
 - [ ] Better Design - Varun || Antonio 
 - [ ] server Architure in 'paper' (Dont know if is needed)(MVC).
 
-- [ ] Design popUp content
 
 
 - [ ] Improved response from jsonFile key-tags check php function on HomeController
@@ -110,7 +109,7 @@ View->Controller->Model:
 > - [ ] Check/Fix responsive to landscape 
 :warning:
 
-- [ ] Implement Testing - 
+- [ ] Implement Testing - lighthouse - google web testing
 ---
 
 
@@ -118,6 +117,7 @@ View->Controller->Model:
 ---
 ### TO DO LIST :seedling: MULTIMEDIA
 
+- [ ] 3D building Textures
 - [ ] Draw a design (desktop portrait & landscape) - Edward
 - [ ] Draw a  3D Building [EEC] - Edward / Beth / Kristiana
 - [ ] Draw a  3D Building [HUB] - Edward / Beth / Kristiana
@@ -127,7 +127,6 @@ View->Controller->Model:
 - [ ] 2D map with 3D Buildings 
 ---
 ### ESSENTIAL(To achieve high mark)
-- [ ] 3D building
 
 :exclamation: :trophy: Project Management :
 > - [ ] :warning: __SCRUM PAPERWORK(gglSpred)__ 
@@ -195,6 +194,8 @@ __week 8 & week 9__
 > - [x] implement User Agents - mobile - browser
 > - [x] implement Desktop layout
 > - [x] implement framework 'three' handle 3D image format(GLTF) [UPLOAD Sample 3ds format - Multimedia ]
+> - [x] Design popUp content
+> - [x] 3D building no Textures
 
 
 __week 10__
