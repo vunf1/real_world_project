@@ -59,7 +59,7 @@ for ($x=0; $x < count($json); $x++) {
 </script>
 <div class="container-fluid" id="main_navigate">
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-12" id="searchingNav">
 			<h3 class="text-center">
 				Navigate Campus
 			</h3>
@@ -171,6 +171,7 @@ $('#validateSearch').on('click', function(){ //antonio roque
         console.log(toInput);// print to the console
         //$("#main_navigate").html(""); clear the div main_navigate 
         console.log("the search was validate, load the route");
+        $("#searchingNav").html("");
         $("#suggestions").html(""); //cleans all the data from the suggestions div
         $('#suggestions').append('hello, load the 3d model');
         $('#suggestions').append(fromInput);

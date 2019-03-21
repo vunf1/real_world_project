@@ -187,7 +187,7 @@ function  alertWarning(data) {//Joao
 
        var list = $('<br><div class=" container div_build list-group-flush" id="'+buildCode+'" ></div>');
        
-           head=("<div class='clearfix split-items '><div class=' left-side' id='D"+data['buildCode']+"' >OMG</div><p  class=' right-side '>"+buildingName+" </p><p  class=' right-side '>Code: "+buildCode+" </p><p  class=' right-side '>Facilities: "+data['facilities'][0]+","+data['facilities'][1]+", . . . </p><small>Click for more information</small><p  class=' right-side2 '><a>Description:</a>"+description+"</p></div><br>");
+           head=("<div class='clearfix split-items '><img class=' left-side rounded' src='assets/building/ECB.JPEG'><p  class=' right-side '>"+buildingName+" </p><p  class=' right-side '>Code: "+buildCode+" </p><small>Click for more information</small><p  class=' right-side2 '><a>Facilities:</a>"+ $.each(data['facilities'],function(index, dats) {dats})+"</p></div><br>");
 
         $(head).appendTo(list);
         $(list).appendTo("#"+appendToElementID);
@@ -229,9 +229,20 @@ function modelTrigger(data){//Joao
          * When key is pressed trigger event
          *
          */
-        message:'<div id="D'+data['buildCode']+'"></div>',
+        message:'<div id="MO'+data['buildCode']+'"></div>',
         'onok': function(){ 
             
             alertify.success(data['name']+' Checked');}
         }).show();
+        
+        let treeD = new TD_class(data['buildCode'],"MO"+data['buildCode'],20,20);
+        treeD.init();
 };
+
+function trigger3D(data){
+    $.each(data,function(index, dats) {
+
+
+    });
+
+}
