@@ -1,62 +1,12 @@
 
 <?php //A.Roque Page ?>
-<?php
 
-
-//this file is the view of the campus navigation, (the 2nd functionality in the nav bar )
-
-for ($x=0; $x < count($json); $x++) { 
-        //var_dump($json[$x]);
-        /*
-        echo "############<br>";
-        echo $json[$x]['buildCode'];
-        echo "<br>";
-        echo $json[$x]['author'];
-        echo "<br>";
-        echo $json[$x]['description'];
-        echo "<br>";
-        echo $json[$x]['gpsCoordinates'][0];
-        echo "<br>";
-        echo $json[$x]['gpsCoordinates'][1];
-        echo "<br>";
-        echo $json[$x]['image-dir'];
-*/
-        
-    
-
-
-}
-
- ?>
 <style>
     body { margin: 0; }
     canvas { width: 100%; height: 100% }
 </style>
 <script type="text/javascript" src="<?php base_url()?>assets/custom.js"></script>
-<!--<script type="text/javascript "src="<?php base_url()?>assets/TD_class.js"></script>-->
-<script>
-    //var scene = new THREE.Scene();
-    //var camera = new THREE.PerspectiveCamera( 90, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
-    //var renderer = new THREE.WebGLRenderer();
-    //renderer.setSize( window.innerWidth, window.innerHeight );
-    //document.body.appendChild( renderer.domElement );
-    
-    //creating an object to present
-    //var geometry = new THREE.BoxGeometry( 1, 1, 1 );  //build a geometry 
-    //var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } ); //set the texture
-    //var cube = new THREE.Mesh( geometry, material ); //put the geometry and the texture together
-    //scene.add( cube ); //load the obejct
-
-    //camera.position.z = 5
-    
-    //function animate() {  //loop to force the render to draw the object
-    //    requestAnimationFrame( animate );
-    //    cube.rotation.x += 0.01;
-    //    cube.rotation.y += 0.01;
-    //    renderer.render( scene, camera );
-    //}
-</script>
 <div class="container-fluid" id="main_navigate">
 	<div class="row">
 		<div class="col-md-12" id="searchingNav">
@@ -68,12 +18,15 @@ for ($x=0; $x < count($json); $x++) {
                     <div class="input-group-prepend">
                         <label class="input-group-text" for="inputGroupSelect01" >Origin</label>
                     </div>
-					<!--<input type="text" class="form-control" id="firstBuilding" value="" placeholder="From"  />-->
+     
+
                     <select class="custom-select firstBuilding" id="inputGroupSelect01">
                         <option > Choose....</option>
-                        <option value"ECB">ECB</option>
-                        <option value"WM">WM</option>
-                        <option value"HUB">HUB</option>
+                        <?php
+                        for ($x=0; $x < count($json); $x++) { 
+                            ?><option value="<?php echo $json[$x]['buildCode'];?>"><?php echo $json[$x]['buildCode']; ?></option> <?php
+                        }
+                        ?>
                     </select>
 				</div>
                 
@@ -83,9 +36,11 @@ for ($x=0; $x < count($json); $x++) {
                     </div>
                     <select class="custom-select secondBuilding" id="inputGroupSelect02 ">
                         <option >Choose...</option>
-                        <option value"ECB">ECB</option>
-                        <option value"WM">WM</option>
-                        <option value"HUB">HUB</option>
+                        <?php
+                        for ($x=0; $x < count($json); $x++) { 
+                            ?><option value="<?php echo $json[$x]['buildCode'];?>"><?php echo $json[$x]['buildCode']; ?></option> <?php
+                        }
+                        ?>
                     </select>
                 </div> 
 				<button type="button" class="btn btn-primary" id="validateSearch">
@@ -196,31 +151,5 @@ $('.suggestionto').on('click',function(){
 
 </script>
 <div id="suggestions">
-    <?php 
-        for($x=0; $x < count($json); $x++){
-            $buildingName = $json[$x]['name'];
-            $image = $json[$x]['image-dir'];
-            $address = $json[$x]['description'];
-            $buildCode = $json[$x]['buildCode'];
-            echo"
-            <div class='row'>
-                <div class='col-md-8'>
-                $buildingName
-                $buildCode
-                $x
-                </div>
-                <div class='col-md-4'>
-                        <button type='button' class='btn active btn-sm btn-outline-info suggestionfrom' value='$buildCode'>
-                            Set as origin
-                        </button> 
-                        <br>
-                        <button type='button' class='btn active btn-sm btn-outline-info suggestionto' value='$buildCode'>
-                            Set as destination 
-                        </button>
-                    </div>
-                </div>
-            <br>
-            ";
-        }
-    ?>
+
 </div>

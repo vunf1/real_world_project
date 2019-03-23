@@ -206,6 +206,7 @@ function delevopPopupDinamic(mydata){//Joao
     $.each(mydata,function(index, data) {
 
         $(document).on('click', '#'+data['buildCode'] , function(){
+            //$('#MO'+data['buildCode'] ).html("");
             modelTrigger(data);
         });
 
@@ -229,7 +230,7 @@ function modelTrigger(data){//Joao
          * When key is pressed trigger event
          *
          */
-        message:'<div id="MO'+data['buildCode']+'"></div>',
+        message:'<div class="clearfix split-items "><p class=" left-side" id="MO'+data['buildCode']+'" ></p><p class=" right-side">'+data['name']+'</p><p class=" right-side">'+data['address']+'</p><p class=" right-side">'+data['description']+'</p></div>',
         'onok': function(){ 
             
             alertify.success(data['name']+' Checked');}
@@ -239,10 +240,3 @@ function modelTrigger(data){//Joao
         treeD.init();
 };
 
-function trigger3D(data){
-    $.each(data,function(index, dats) {
-
-
-    });
-
-}
