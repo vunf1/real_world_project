@@ -38,7 +38,9 @@ $( document ).ready(function(){
     $( "#body_element_index" ).css("display", "block");
 
 
-    $( '#search-op' ).on('click',function(){
+    $( '#search-op' ).on('click',function(){//Joao
+        
+                $('#container').html("");
     //Trigger Ajax after action on btn(search-op) on welcome_message.php
         alertWarning("Loading page..."); 
 
@@ -60,10 +62,12 @@ $( document ).ready(function(){
         });
     });
     
-    $( "#nav-op" ).on('click',function() {//Joao
+    $( "#nav-op" ).on('click',function navOP() {//Joao
+        
+                $('#container').html("");
         //Trigger Ajax after action on btn(nav-op) on welcome_message.php
         alertWarning("Loading page...") ; 
-        $.ajax({
+         $.ajax({
             url:base_url()+'index.php/Homecontroller/index_contentNavCam',
             method:"POST",
             datatype:'text',
@@ -76,10 +80,13 @@ $( document ).ready(function(){
                 alertError("Search Error: "+ xhr.status+" - "+error);
             }
         });
+       
     });
+    
 
-    $( "#scan-op" ).on('click',function() {//Antonio Braga
+    $( "#scan-op" ).on('click',function() {//Joao
         
+                $('#container').html("");
         //Trigger Ajax after action on btn(scan-op) on welcome_message.php
         alertWarning("Loading page...") ; 
         $.ajax({
@@ -175,22 +182,24 @@ function  alertWarning(data) {//Joao
   */
  function buildSearchList(mydata,appendToElementID){//Joao 
     $counter=0;
+    
    delevopPopupDinamic(mydata);
    $.each(mydata,function(index, data) {
 
-       var buildingName = data['name'];
-       var image = data['image-dir'];
-       var address = data['address'];
-       var description = data['description'];
+    
+        var buildingName = data['name'];
+        var image = data['image-dir'];
+        var address = data['address'];
+        var description = data['description'];
 
-       var buildCode = data['buildCode'];
+        var buildCode = data['buildCode'];
 
-       var list = $('<br><div class=" container div_build list-group-flush" id="'+buildCode+'" ></div>');
-       
-           head=("<div class='clearfix split-items '><img class=' left-side rounded' src='assets/building/ECB.JPEG'><p  class=' right-side '>"+buildingName+" </p><p  class=' right-side '>Code: "+buildCode+" </p><small>Click for more information</small><p  class=' right-side2 '><a>Facilities:</a>"+ $.each(data['facilities'],function(index, dats) {dats})+"</p></div><br>");
+        var list = $('<br><div class=" container div_build list-group-flush" id="'+buildCode+'" ></div>');
+        
+            head=("<div class='clearfix split-items '><img class=' left-side rounded' src='assets/building/ECB.JPEG'><p  class=' right-side '>"+buildingName+" </p><p  class=' right-side '>Code: "+buildCode+" </p><small>Click for more information</small><p  class=' right-side2 '><a>Facilities:</a>"+ $.each(data['facilities'],function(index, dats) {dats})+"</p></div><br>");
 
-        $(head).appendTo(list);
-        $(list).appendTo("#"+appendToElementID);
+            $(head).appendTo(list);
+            $(list).appendTo("#"+appendToElementID);
         
    });
 };
@@ -206,7 +215,7 @@ function delevopPopupDinamic(mydata){//Joao
     $.each(mydata,function(index, data) {
 
         $(document).on('click', '#'+data['buildCode'] , function(){
-            //$('#MO'+data['buildCode'] ).html("");
+            
             modelTrigger(data);
         });
 
@@ -222,7 +231,9 @@ function delevopPopupDinamic(mydata){//Joao
  * @param {JSON} data:jsonFormat
  */
 function modelTrigger(data){//Joao
+    $('#MO'+data['buildCode'] ).html("");
     var closable = alertify.alert().setting('closable');//grab the dialog instance using its parameter-less constructor then set multiple settings at once.
+    
     alertify.alert().setting({
         'title':data['name'],
         'label':'Continue',
@@ -230,7 +241,7 @@ function modelTrigger(data){//Joao
          * When key is pressed trigger event
          *
          */
-        message:'<div class="clearfix split-items "><p class=" left-side" id="MO'+data['buildCode']+'" ></p><p class=" right-side">'+data['name']+'</p><p class=" right-side">'+data['address']+'</p><p class=" right-side">'+data['description']+'</p></div>',
+        message:'<div class="clearfix split-items "><p></p><p class=" left-side" id="MO'+data['buildCode']+'" ></p><p class=" right-side"><a style="color:red;">Name:</a> '+data['name']+'</p><p class=" right-side"><a style="color:purple;">Post-Code:</a> '+data['address']+'</p><p class=" right-side"><a style="color:green;">Description:</a> '+data['description']+'</p></div>',
         'onok': function(){ 
             
             alertify.success(data['name']+' Checked');}
