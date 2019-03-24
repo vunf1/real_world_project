@@ -1,4 +1,3 @@
-
 /**
  * loaded on loadscript
  *  REQUIRE:
@@ -7,10 +6,11 @@
  * <script src="<?php base_url()?>assets/GLTFLoader.js"></script>
  */
 class TD_class {//Joao
-    constructor(buildCode,elementID) { 
+    constructor(buildCode,elementID,percW,percH) { 
         this.buildCode = buildCode;
         this.elementID = elementID;
-
+        this.percW = percW;
+        this.percH = percH;
 
         this.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
         this.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
@@ -39,7 +39,7 @@ init() {
 
     console.log("width: "+this.width);
     console.log("height: "+this.height);
-    console.log("new W :"+this.width*20/100,"new H :"+ this.height*40/100) ;
+    console.log("new W :"+this.width*this.percW/100,"new H :"+ this.height*this.percH/100) ;
     this.createCamera();
     
     this.createControls();
@@ -65,7 +65,7 @@ init() {
 var degree=Math.PI/180;
   this.camera = new THREE.PerspectiveCamera( 45,this.width / this.height, 1, 1000 );
 	this.camera.position.x=50;
-	this.camera.position.y=120;
+	this.camera.position.y=400;
     this.camera.position.z=80;
 
     this.camera.updateProjectionMatrix();
@@ -126,7 +126,7 @@ var degree=Math.PI/180;
 
   // create a WebGLRenderer and set its this.width and $this.height
   this.renderer = new THREE.WebGLRenderer( { antialias: true } );
-  this.renderer.setSize(this.width*20/100, this.height*100 );
+  this.renderer.setSize(this.width*this.percW/100, this.height*this.percH/100 );
 
   this.renderer.setPixelRatio( window.devicePixelRatio );
 
@@ -166,7 +166,7 @@ onWindowResize() {
   // update the this.camera's frustum
   this.camera.updateProjectionMatrix();
 
-  this.renderer.setSize( this.width*20/100, this.height*40/100);
+  this.renderer.setSize( this.width*this.percW/100, this.height*this.percH/100);
 
 }
 

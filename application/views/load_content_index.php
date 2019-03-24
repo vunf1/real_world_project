@@ -59,7 +59,7 @@ $( document ).ready(function(){
 function trigger3D(data){
     $.each(data,function(index, dats) {
 
-        let treeD = new TD_class(dats['buildCode'].toString(),"D"+dats['buildCode'].toString());
+        let treeD = new TD_class(dats['buildCode'],"MO"+dats['buildCode']);
         treeD.init();
 
     });
