@@ -12,7 +12,11 @@
 * CSS Load for DESKTOP
 */
 
-  
+  .alertify .ajs-dialog {
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
   @media all and (display-mode:  browser) {
 	body {
 		background-color: #fff;

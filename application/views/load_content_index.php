@@ -42,7 +42,7 @@ $( document ).ready(function(){
                 $("#listContainer").html("");
                 buildSearchList($.parseJSON(data),"listContainer");
 
-                trigger3D($.parseJSON(data));
+                //trigger3D($.parseJSON(data));
   
                 //console.log($("#DHUB"));
                 
@@ -59,8 +59,8 @@ $( document ).ready(function(){
 function trigger3D(data){
     $.each(data,function(index, dats) {
 
-        let treeD = new TD_class(dats['buildCode'],"MO"+dats['buildCode']);
-        treeD.init();
+        //let treeD = new TD_class(dats['buildCode'],"MO"+dats['buildCode']);
+        //treeD.init();
 
     });
 
