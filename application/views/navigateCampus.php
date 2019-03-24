@@ -43,9 +43,9 @@
                         ?>
                     </select>
                 </div> 
-				<button type="button" class="btn btn-primary" id="validateSearch">
+				<a class="btn btn-primary btn-md active btn-block" id="validateSearch">
 					Search
-				</button>
+				</a>
 			</form>
 		</div>
 	</div>
