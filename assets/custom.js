@@ -196,7 +196,7 @@ function  alertWarning(data) {//Joao
 
         var list = $('<br><div class=" container div_build list-group-flush" id="'+buildCode+'" ></div>');
         
-            head=("<div class='clearfix split-items '><img class=' left-side rounded' src='assets/building/ECB.JPEG'><p  class=' right-side '>"+buildingName+" </p><p  class=' right-side '>Code: "+buildCode+" </p><small>Click for more information</small><p  class=' right-side2 '><a>Facilities:</a>"+ $.each(data['facilities'],function(index, dats) {dats})+"</p></div><br>");
+            head=("<div class='clearfix split-items '><img class=' left-side rounded' src='assets/building/jpeg/"+buildCode+".JPEG'><p  class=' right-side '>"+buildingName+" </p><p  class=' right-side '>Code: "+buildCode+" </p><small>Click for more information</small><p  class=' right-side2 '><a>Facilities:</a>"+ $.each(data['facilities'],function(index, dats) {dats})+"</p></div><br>");
 
             $(head).appendTo(list);
             $(list).appendTo("#"+appendToElementID);
@@ -247,7 +247,7 @@ function modelTrigger(data){//Joao
             alertify.success(data['name']+' Checked');}
         }).show();
         
-        let treeD = new TD_class(data['buildCode'],"MO"+data['buildCode'],20,20);
+        let treeD = new TD_class("GLTF/"+data['buildCode'],"MO"+data['buildCode'],20,20);
         treeD.init();
 };
 
