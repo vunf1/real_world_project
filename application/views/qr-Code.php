@@ -1,7 +1,8 @@
 <html lang="en">
   <head>
-    <script type="text/javascript" src="assets/src-QR/jsqrcode-combined.min.js"></script>
-    <script type="text/javascript" src="assets/src-QR/html5-qrcode.min.js"></script>
+  <script src="assets/src-QR/jquery-1.9.1.min.js"></script>
+  <script src="assets/src-QR/html5-qrcode.min.js"></script>
+    <script src="assets/src-QR/main.js"></script>
     
   </head>
   <body>
@@ -33,20 +34,11 @@ for ($x=0; $x < count($json); $x++) {
 }
 ?>
 
-<h2 align="center">Qr Code Scanner</h2>
+<h5 align="center">QR Code Reader</h5>
 
-<center><div id="reader" style="width:300px;height:250px"></center>
-    </div>
-      <script type="text/javascript">
-      $('#reader').html5_qrcode(function(data){
-     // do something when code is read
-        },
-        function(error){
-          //show read errors 
-        }, function(videoError){
-          //the video stream could be opened
-        }
-      );
-      </script>
+<center><div id="reader" style="width:300px;height:250px;"></div></center>
+
+<b><h4 align="center">Result:</h4></b>
+<center><span id="read" class="center"></span></center>
     </body>
 </html>
