@@ -32,6 +32,7 @@
 
   
 $( document ).ready(function(){
+    
     $.ajax({// create list when click on navBar op-Searching
             url:base_url()+"index.php/Homecontroller/searchBuildings",
             method:"POST",
@@ -40,6 +41,7 @@ $( document ).ready(function(){
             success:function(data){
                 
                 $("#listContainer").html("");
+
                 buildSearchList($.parseJSON(data),"listContainer");
 
                 //trigger3D($.parseJSON(data));

@@ -69,9 +69,9 @@ class TD_class {//Joao
    */
   var degree=Math.PI/180;
     this.camera = new THREE.PerspectiveCamera( 45,this.width / this.height, 1, 1000 );
-    this.camera.position.x=50;
+    this.camera.position.x=80;
     this.camera.position.y=400;
-      this.camera.position.z=80;
+      this.camera.position.z=20;
 
       this.camera.updateProjectionMatrix();
       

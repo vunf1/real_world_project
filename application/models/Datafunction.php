@@ -20,6 +20,9 @@ class Datafunction extends CI_Model {
          */
         public function get_jsonfile_data(){
                 $jsonfile=file_get_contents('assets/document-building.json');
+                
+                                //var_dump($jsonfile);
+                                //return $jsonfile;
                 return json_decode($jsonfile,TRUE);
         }
 
@@ -32,11 +35,12 @@ class Datafunction extends CI_Model {
          */
         public function get_Selected_data($search){
                 $data = $this->get_jsonfile_data();
+                
+                                //var_dump($data);
                 $endSearchData=array();
                 $counte=0;
                 for ($x=0; $x < count($data); $x++) {//ALL DATA FOR()
-                        if($data[$x]['tags']){//Tag Block of memmory
-                                
+                        if($data[$x]['tags']){//Tag Block of memory
                                 for ($y=0; $y < count($data[$x]['tags']); $y++) {
                                         
                                         if(strtoupper($data[$x]['tags'][$y])==strtoupper($search)){// MATCH ADD ALL ELEMENT TO ARRAY

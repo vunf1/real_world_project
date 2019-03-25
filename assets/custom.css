@@ -166,15 +166,16 @@ ul {
 	font-size:100%;
 
 	}
-.split-items, .list-group-item, .left-side{//no borders on left-right side
+.split-items, .list-group-item, .left-side{
+	/*no borders on left-right side*/
 		
 	border-top-right-radius:0px;
 	border-bottom-right-radius:0px;
 	}
 
 .split-items, .list-group-item, .right-side{
-		//no borders on right + text justify - need to put first child of .right-side without text justify ;
-
+		/*no borders on right + text justify - need to put first child of .right-side without text justify ;
+*/
 		border:0;
 		text-align: left;
 		border-top-left-radius:0px;
