@@ -1,23 +1,8 @@
 <html lang="en">
   <head>
-    <script type="text/javascript" src="assets\src-QR\grid.js"></script>
-    <script type="text/javascript" src="assets\src-QR\version.js"></script>
-    <script type="text/javascript" src="assets\src-QR\detector.js"></script>
-    <script type="text/javascript" src="assets\src-QR\formatinf.js"></script>
-    <script type="text/javascript" src="assets\src-QR\errorlevel.js"></script>
-    <script type="text/javascript" src="assets\src-QR\bitmat.js"></script>
-    <script type="text/javascript" src="assets\src-QR\datablock.js"></script>
-    <script type="text/javascript" src="assets\src-QR\bmparser.js"></script>
-    <script type="text/javascript" src="assets\src-QR\datamask.js"></script>
-    <script type="text/javascript" src="assets\src-QR\rsdecoder.js"></script>
-    <script type="text/javascript" src="assets\src-QR\gf256poly.js"></script>
-    <script type="text/javascript" src="assets\src-QR\gf256.js"></script>
-    <script type="text/javascript" src="assets\src-QR\decoder.js"></script>
-    <script type="text/javascript" src="assets\src-QR\qrcode.js"></script>
-    <script type="text/javascript" src="assets\src-QR\findpat.js"></script>
-    <script type="text/javascript" src="assets\src-QR\alignpat.js"></script>
-    <script type="text/javascript" src="assets\src-QR\databr.js"></script>
-    <script type="text/javascript" src="assets\src-QR\customjs.js"></script>
+    <script type="text/javascript" src="assets/src-QR/jsqrcode-combined.min.js"></script>
+    <script type="text/javascript" src="assets/src-QR/html5-qrcode.min.js"></script>
+    
   </head>
   <body>
 <?php //Varun Page ?>
@@ -48,11 +33,20 @@ for ($x=0; $x < count($json); $x++) {
 }
 ?>
 
-<h2>Qr Code Scanner</h2>
+<h2 align="center">Qr Code Scanner</h2>
 
-<div class="video-container">
-  <video id="video-preview"></video>
-  <canvas id="qr-canvas" class="hidden" ></canvas>
-</div>
+<center><div id="reader" style="width:300px;height:250px"></center>
+    </div>
+      <script type="text/javascript">
+      $('#reader').html5_qrcode(function(data){
+     // do something when code is read
+        },
+        function(error){
+          //show read errors 
+        }, function(videoError){
+          //the video stream could be opened
+        }
+      );
+      </script>
     </body>
 </html>
