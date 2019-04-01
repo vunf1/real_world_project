@@ -44,7 +44,6 @@
 		</div>
 	</div>
 </div>
-<hr> 
 
 <script >
 
@@ -68,8 +67,15 @@ $('#validateSearch').on('click', function(){ //antonio roque
     if (fromInput != 'choose' && toInput != 'choose' && fromInput!=toInput ){
         
         
-        $("#container").html("");
-        triggerMap(fromInput,toInput,"container",100,70);
+        $("#suggestions").html("");
+        
+        let list = $('<br><div id="backBtn" style="widht:60%;bottom: 10px;"  ></div>');
+        
+           let head=("<a style='position:absolute; bottom:0; width: 60%;' class='btn btn-primary' >Back</a>");
+
+            $(head).appendTo(list);
+           // $(list).appendTo("#btnn");
+        triggerMap(fromInput,toInput,"suggestions",90,40);
     }
     else{
         alertError ("Search is not possible");
@@ -77,8 +83,10 @@ $('#validateSearch').on('click', function(){ //antonio roque
     
 });  
 
+$('#backBtn').on('click', function(){
 
-/*
+    callNav();
+});
 function callNav(){//Joao 
     alertWarning("Loading page...") ;
     $.ajax({
@@ -95,10 +103,10 @@ function callNav(){//Joao
         }
     });
 
-    }*/
+    }
 </script>
 <div id="suggestions">
-<!--
+
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
@@ -118,16 +126,21 @@ function callNav(){//Joao
         <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
-        </a>-->
-</div>
-
-
-
-
-
-
-
+        </a>
 
 
 
 </div>
+
+
+
+
+
+
+
+
+
+</div>
+<div id="btnn" style="widht:50%;bottom: 10px;" >
+        
+        </div>
