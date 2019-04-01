@@ -65,8 +65,8 @@ $('#firstBuilding').on('keyup keypress', function(e) {
     }
   });
 
-function call3dmodel(buildingCode, elementId){  //antonio roque
-    model = new TD_class(buildingCode, elementId,20,20);
+function call3dmodel(buildingCode, elementId, height, width){  //antonio roque
+    model = new TD_class(buildingCode, elementId,height,width);
     model.init();
 }
 $('#validateSearch').on('click', function(){ //antonio roque
@@ -89,7 +89,8 @@ $('#validateSearch').on('click', function(){ //antonio roque
         console.log("MAP_"+fromInput+"_"+toInput); //print to the console
         $("#searchingNav").html("");
         $("#container").html("");
-        call3dmodel("../../assets/building/GLTF/HUBTOECB","container");
+        //the function takes as imput, the path to the file, the div where to pront ad the height and with
+        call3dmodel("../../assets/building/GLTF/"+fromInput+"TO"+toInput,"container",60,60);
         //call3dmodel(fromInput, 'container',40,100);
         
         //callNav();
