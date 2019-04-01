@@ -85,10 +85,11 @@ $('#validateSearch').on('click', function(){ //antonio roque
         //$('#suggestions').append(call3dmodel(fromInput+"_"+toInput, 'suggestions',20,20));
     
     */
-    
+        
         console.log("MAP_"+fromInput+"_"+toInput); //print to the console
         $("#searchingNav").html("");
         $("#container").html("");
+        call3dmodel("../../assets/building/GLTF/HUBTOECB","container");
         //call3dmodel(fromInput, 'container',40,100);
         
         //callNav();

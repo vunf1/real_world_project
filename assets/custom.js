@@ -241,7 +241,7 @@ function modelTrigger(data){//Joao
          * When key is pressed trigger event
          *
          */
-        message:'<div class="clearfix split-items "><p></p><p class=" left-side" id="MO'+data['buildCode']+'" ></p><p class=" right-side"><a style="color:red;">Name:</a> '+data['name']+'</p><p class=" right-side"><a style="color:purple;">Post-Code:</a> '+data['address']+'</p><p class=" right-side"><a style="color:green;">Description:</a> '+data['description']+'</p></div>',
+        message:'<div class="clearfix split-items "><p></p><p class=" left-side" id="MO'+data['buildCode']+'" ></p><p class=" right-side"><a style="color:red;">Name:</a> '+data['name']+'</p><p class=" right-side"><a style="color:purple;">Post-Code:</a> '+data['address']+'</p><p class=" right-side"><a style="color:green;">Description:</a> '+data['description']+'</p>',
         'onok': function(){ 
             
             alertify.success(data['name']+' Checked');}
