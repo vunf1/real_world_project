@@ -1,12 +1,6 @@
 
 <?php //A.Roque Page ?>
 
-<style>
-    body { margin: 0; }
-    canvas { width: 100%; height: 100% }
-</style>
-<script type="text/javascript" src="<?php base_url()?>assets/custom.js"></script>
-
 <div class="container-fluid" id="main_navigate">
 	<div class="row">
 		<div class="col-md-12" id="searchingNav">
@@ -25,7 +19,7 @@
                         <?php
                         for ($x=0; $x < count($json); $x++) { 
                             ?><option value="<?php echo $json[$x]['buildCode'];?>"><?php echo $json[$x]['buildCode']; ?></option> <?php
-                        }
+                        };
                         ?>
                     </select>
 				</div>
@@ -39,7 +33,7 @@
                         <?php
                         for ($x=0; $x < count($json); $x++) { 
                             ?><option value="<?php echo $json[$x]['buildCode'];?>"><?php echo $json[$x]['buildCode']; ?></option> <?php
-                        }
+                        };
                         ?>
                     </select>
                 </div> 
@@ -55,7 +49,7 @@
 <script >
 
 
-    
+  /*  
 $('#firstBuilding').on('keyup keypress', function(e) {
     //Block key Event ENTER on id secondBuilding //SEARCH.BAR
     var keyCode = e.keyCode || e.which;
@@ -64,47 +58,27 @@ $('#firstBuilding').on('keyup keypress', function(e) {
       return false;
     }
   });
+*/
 
-function call3dmodel(buildingCode, elementId, height, width){  //antonio roque
-    model = new TD_class(buildingCode, elementId,height,width);
-    model.init();
-}
+
 $('#validateSearch').on('click', function(){ //antonio roque
     var fromInput = $('.firstBuilding').val(); //put the tu contents of the dropdowns into the variables
     var toInput = $('.secondBuilding').val();
-    if ((fromInput != 'choose' && toInput != 'choose' )&& fromInput!=toInput ){
-        /*
-        console.log(fromInput); //print to the console
-        console.log(toInput);// print to the console
-        //$("#main_navigate").html(""); clear the div main_navigate 
-        console.log("the search was validate, load the route");
-        $("#searchingNav").html("");
-        $("#suggestions").html(""); //cleans all the data from the suggestions div
-        $('#suggestions').append('hello, load the 3d model');
-        $('#suggestions').append(fromInput);
-        //$('#suggestions').append(call3dmodel(fromInput+"_"+toInput, 'suggestions',20,20));
     
-    */
+    if (fromInput != 'choose' && toInput != 'choose' && fromInput!=toInput ){
         
-        console.log("MAP_"+fromInput+"_"+toInput); //print to the console
-        $("#searchingNav").html("");
+        
         $("#container").html("");
-        //the function takes as imput, the path to the file, the div where to pront ad the height and with
-        call3dmodel("../../assets/building/GLTF/"+fromInput+"TO"+toInput,"container",60,60);
-        //call3dmodel(fromInput, 'container',40,100);
-        
-        //callNav();
-    
-    
-    
-    
+        triggerMap(fromInput,toInput,"container",100,70);
     }
     else{
         alertError ("Search is not possible");
     }
     
-});   
+});  
 
+
+/*
 function callNav(){//Joao 
     alertWarning("Loading page...") ;
     $.ajax({
@@ -121,37 +95,39 @@ function callNav(){//Joao
         }
     });
 
-}
+    }*/
 </script>
 <div id="suggestions">
-
-
-
-
-
-
-
-
-
+<!--
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img style="width:100%;height:auto;" class="d-block w-80" src="assets/careers-fair-event.PNG" alt="First slide">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img style="width:100%;height:auto;" class="d-block w-80" src="assets/careers-fair-event.PNG" alt="First slide">
+        </div>
+    <div class="carousel-item">
+        <img style="width:100%;height:auto;" class="d-block w-80" src="assets/graduation.PNG" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img style="width:100%;height:auto;" class="d-block w-80" src="assets/graduation.PNG" alt="Second slide">
+        <img style="width:100%;height:auto;" class="d-block w-80" src="assets/freshers.PNG" alt="Third slide">
     </div>
-    <div class="carousel-item">
-      <img style="width:100%;height:auto;" class="d-block w-80" src="assets/freshers.PNG" alt="Third slide">
     </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
-  </a>
+        </a>-->
 </div>
+
+
+
+
+
+
+
+
+
+
 </div>

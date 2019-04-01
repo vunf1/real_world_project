@@ -62,7 +62,7 @@ $( document ).ready(function(){
         });
     });
     
-    $( "#nav-op" ).on('click',function navOP() {//Joao
+    $( "#nav-op" ).on('click',function () {//Joao
         
                 $('#container').html("");
         //Trigger Ajax after action on btn(nav-op) on welcome_message.php
@@ -70,7 +70,7 @@ $( document ).ready(function(){
          $.ajax({
             url:base_url()+'index.php/Homecontroller/index_contentNavCam',
             method:"POST",
-            datatype:'text',
+            datatype:'html',
             success:function(data){
                 $('#container').html("");
                 $('#container').html(data);
@@ -251,3 +251,9 @@ function modelTrigger(data){//Joao
         treeD.init();
 };
 
+function triggerMap(fromInput,toInput,elementID,witH,height){
+
+    model = new TD_class("GLTF/map/"+fromInput+"TO"+toInput, elementID,witH,height);
+    model.init();
+
+}
