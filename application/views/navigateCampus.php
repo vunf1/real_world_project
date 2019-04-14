@@ -96,6 +96,9 @@ function callNav(){//Joao
         success:function(data){
             $('#container').html("");
             $('#container').html(data);
+            $('#containers').html("");//put empty all elements
+            
+            $('#containers').html(data);
             alertSuccess("Loaded");
         },
         error: function(xhr, status, error){
@@ -107,18 +110,20 @@ function callNav(){//Joao
 </script>
 <div id="suggestions">
 
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img style="width:100%;height:auto;" class="d-block w-80" src="assets/careers-fair-event.PNG" alt="First slide">
-        </div>
-    <div class="carousel-item">
-        <img style="width:100%;height:auto;" class="d-block w-80" src="assets/graduation.PNG" alt="Second slide">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img style="width:100%;height:auto;" class="d-block w-80" src="assets/careers-fair-event.PNG" alt="First slide">
+            </div>
+        <div class="carousel-item">
+            <img style="width:100%;height:auto;" class="d-block w-80" src="assets/graduation.PNG" alt="Second slide">
     </div>
+
     <div class="carousel-item">
         <img style="width:100%;height:auto;" class="d-block w-80" src="assets/freshers.PNG" alt="Third slide">
     </div>
-    </div>
+
+</div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
