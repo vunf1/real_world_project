@@ -48,7 +48,7 @@ $( document ).ready(function(){
         $.ajax({
         url:base_url()+'index.php/Homecontroller/index_content',
         method:"POST",
-        dataType:'text',
+        dataType:'html',
         success:function(data){
     
             $('#container').html("");//put empty all elements
