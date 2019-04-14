@@ -41,7 +41,6 @@ $( document ).ready(function(){
     $( '#search-op' ).on('click',function(){//Joao
         
                 $('#container').html("");
-                $('#containers').html("");
     //Trigger Ajax after action on btn(search-op) on welcome_message.php
         alertWarning("Loading page..."); 
 
@@ -52,10 +51,8 @@ $( document ).ready(function(){
         success:function(data){
     
             $('#container').html("");//put empty all elements
-            $('#containers').html("");
             
             $('#container').html(data);
-            $('#containers').html(data);
             
             alertSuccess("Loaded");
         },
@@ -68,7 +65,6 @@ $( document ).ready(function(){
     $( "#nav-op" ).on('click',function () {//Joao
         
                 $('#container').html("");
-                $('#containers').html("");
         //Trigger Ajax after action on btn(nav-op) on welcome_message.php
         alertWarning("Loading page...") ; 
          $.ajax({
@@ -78,8 +74,6 @@ $( document ).ready(function(){
             success:function(data){
                 $('#container').html("");
                 $('#container').html(data);
-                $('#containers').html("");
-                $('#containers').html(data);
                 alertSuccess("Loaded");
             },
             error: function(xhr, status, error){
@@ -93,7 +87,6 @@ $( document ).ready(function(){
     $( "#scan-op" ).on('click',function() {//Joao
         
                 $('#container').html("");
-                $('#containers').html("");
         //Trigger Ajax after action on btn(scan-op) on welcome_message.php
         alertWarning("Loading page...") ; 
         $.ajax({
@@ -104,8 +97,6 @@ $( document ).ready(function(){
                 console.log(data);
                 $('#container').html("");
                 $('#container').html(data);
-                $('#containers').html("");
-                $('#containers').html(data);
                 alertSuccess("Loaded");
             },
             error: function(xhr, status, error){
@@ -260,7 +251,7 @@ function modelTrigger(data){//Joao
         treeD.init();
 };
 
-function triggerMap(fromInput,toInput,elementID,witH,height){//Joao
+function triggerMap(fromInput,toInput,elementID,witH,height){
 
     model = new TD_class("GLTF/map/"+fromInput+"TO"+toInput, elementID,witH,height);
     model.init();
