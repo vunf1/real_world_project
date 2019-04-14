@@ -29,7 +29,7 @@
 
 </div>
 
-<div id="containers" style="height=100%;"  class=" main">
+<div id="container"  class=" main">
 <!--
 <script type="text/javascript "src="https://unpkg.com/three@0.102.1/build/three.js"></script>
 
