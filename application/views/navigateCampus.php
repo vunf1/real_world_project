@@ -1,5 +1,5 @@
 
-<?php //A.Roque Page ?>
+<?php //A.Roque Page - Major help (Joao) ?>
 
 <div class="container-fluid" id="main_navigate">
 	<div class="row">
@@ -47,6 +47,58 @@
 
 <script >
 
+$( document ).ready(function(){
+
+
+    $('#validateSearch').on('click', function(){ //antonio roque
+        var fromInput = $('.firstBuilding').val(); //put the tu contents of the dropdowns into the variables
+        var toInput = $('.secondBuilding').val();
+        
+        if (fromInput != 'choose' && toInput != 'choose' && fromInput!=toInput ){
+            
+            
+            $("#suggestions").html("");
+            
+            let list = $('<br><div id="backBtn" style="widht:60%;bottom: 10px;"  ></div>');
+            
+            let head=("<a style='position:absolute; bottom:0; width: 60%;' class='btn btn-primary' >Back</a>");
+
+                $(head).appendTo(list);
+            // $(list).appendTo("#btnn");
+            triggerMap(fromInput,toInput,"suggestions",90,40);
+        }
+        else{
+            alertError ("Search is not possible");
+        }
+    });  
+
+    $('#backBtn').on('click', function(){//Joao
+
+        callNav();
+    });
+    function callNav(){//Joao 
+        alertWarning("Loading page...") ;
+        $.ajax({
+            url:base_url()+'index.php/Homecontroller/index_contentNavCam',
+            method:"POST",
+            datatype:'text',
+            success:function(data){
+                $('#container').html("");
+                $('#container').html(data);
+                $('#containers').html("");
+                $('#containers').html(data);
+                alertSuccess("Loaded");
+            },
+            error: function(xhr, status, error){
+                alertError("Search Error: "+ xhr.status+" - "+error);
+            }
+        });
+
+    }
+
+
+
+});
 
   /*  
 $('#firstBuilding').on('keyup keypress', function(e) {
@@ -59,74 +111,31 @@ $('#firstBuilding').on('keyup keypress', function(e) {
   });
 */
 
-
-$('#validateSearch').on('click', function(){ //antonio roque
-    var fromInput = $('.firstBuilding').val(); //put the tu contents of the dropdowns into the variables
-    var toInput = $('.secondBuilding').val();
-    
-    if (fromInput != 'choose' && toInput != 'choose' && fromInput!=toInput ){
-        
-        
-        $("#suggestions").html("");
-        
-        let list = $('<br><div id="backBtn" style="widht:60%;bottom: 10px;"  ></div>');
-        
-           let head=("<a style='position:absolute; bottom:0; width: 60%;' class='btn btn-primary' >Back</a>");
-
-            $(head).appendTo(list);
-           // $(list).appendTo("#btnn");
-        triggerMap(fromInput,toInput,"suggestions",90,40);
-    }
-    else{
-        alertError ("Search is not possible");
-    }
-    
-});  
-
-$('#backBtn').on('click', function(){
-
-    callNav();
-});
-function callNav(){//Joao 
-    alertWarning("Loading page...") ;
-    $.ajax({
-        url:base_url()+'index.php/Homecontroller/index_contentNavCam',
-        method:"POST",
-        datatype:'text',
-        success:function(data){
-            $('#container').html("");
-            $('#container').html(data);
-            alertSuccess("Loaded");
-        },
-        error: function(xhr, status, error){
-            alertError("Search Error: "+ xhr.status+" - "+error);
-        }
-    });
-
-    }
 </script>
 <div id="suggestions">
 
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img style="width:100%;height:auto;" class="d-block w-80" src="assets/careers-fair-event.PNG" alt="First slide">
-        </div>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img style="width:100%;height:auto;" class="d-block w-80" src="assets/careers-fair-event.PNG" alt="First slide">
+            </div>
+        <div class="carousel-item">
+            <img style="width:100%;height:auto;" class="d-block w-80" src="assets/graduation.PNG" alt="Second slide">
+    </div>
+
     <div class="carousel-item">
-        <img style="width:100%;height:auto;" class="d-block w-80" src="assets/graduation.PNG" alt="Second slide">
+            <img style="width:100%;height:auto;" class="d-block w-80" src="assets/freshers.PNG" alt="Third slide">
     </div>
-    <div class="carousel-item">
-        <img style="width:100%;height:auto;" class="d-block w-80" src="assets/freshers.PNG" alt="Third slide">
-    </div>
-    </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    
+    
+<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="sr-only">Previous</span></a>
+
+<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
-        </a>
+</a>
 
 
 
